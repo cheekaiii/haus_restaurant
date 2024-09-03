@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="reset.css" rel="stylesheet" type="text/css"/>
+    <link href="headernav.css" rel="stylesheet" type="text/css"/>
+    <link href="rating.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="logo.png">
+    <style>
+body{
+    background-color: #F9F6F0;
+    }
+  @keyframes color {
+  0%   { background: #d6cec0; }
+  20%  { background: #c4ae78; }
+  40%  { background: #6f5b3e; }
+  60% { background: #ae8781; }
+  80%  { background: #d6c099; }
+  100%  { background: #d6cec0; }
+}
+
+body {
+  animation: color 9s infinite linear;
+  text-align: center;
+}
+h1 {
+  position: relative;
+  text-align: center;
+
+  font-size: 6em;
+  color: #171515;
+  text-align: left;
+  bottom: 20%;
+  overflow: hidden;
+}
+
+h3{
+  padding: 13px 0 0 4px;
+  color:#6f5b3e;
+}
+ header{
+    position: fixed;
+  top: 0;
+ }
+
+ .body{
+  width: 100%;
+  display:flex;
+ }
+
+ .left {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 40%;
+    height: 100vh;
+    background-color: #F9F6F0;
+    overflow: hidden;
+}
+ .right{
+  width: 60%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .center-content {
+    text-align: left; /* Center text within the center-content div */
+    display: inline-block;
+    padding: 0 0 0 12%;
+  }
+  #period{
+    color: #c4ae78;
+    padding-left: 8px;
+  }
+
+  #review{
+    width:100%;
+    height:15vh;
+    object-fit: cover;
+    position: relative;
+    right:10px;
+  }
+
+  #review:hover{
+    opacity: 0.6;
+  }
+
+    </style>
+    <title>RATING</title>
+</head>
+<body>
+    <header>
+      <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a class="active" href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="space"></li>
+        <li class="login" id="profile"><a href="login.html">Login</a></li>
+        <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+</ul>
+</header>
+    <div class="body">
+    <div class="left">
+      <div class="center-content">
+        <h1>Your opinion matters<span id="period">.</span></h1>
+        <h3>Your reviews motivate us to do better!</h3>
+    </div>
+    </div>
+    <div class="right">
+    <div class="container">
+        <div class="post">
+          <div class="text">Thanks for rating us!</div>
+          <div class="return"><a href="review.html" id="return">Return to review page</a></div>
+          <div class="edit">EDIT</div>
+        </div>
+        <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5">
+          <label for="rate-5" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-4">
+          <label for="rate-4" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-3">
+          <label for="rate-3" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-2">
+          <label for="rate-2" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-1">
+          <label for="rate-1" class="fas fa-star"></label>
+          <form >
+            <header></header>
+            <div style="width: 100%;height: 15vh;">
+                <label for="input-file" style="float: none;"><img src="add.png" id="review"></label>
+                <input type="file" accept="image/jpeg, image/jpg, image/png" id="input-file">
+            </div>
+            <div class="textarea">
+              <textarea cols="30" placeholder="Describe your experience.." id="myTextarea" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit" >Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+      </div>
+      <script>
+        let review=document.getElementById("review");
+    let inputFile=document.getElementById("input-file");
+    
+    inputFile.onchange=function(){
+        review.src= URL.createObjectURL(inputFile.files[0]);
+    }
+    
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+        btn.onclick = ()=>{
+          widget.style.display = "none"; //hide star widget
+          post.style.display = "block"; //display post
+          editBtn.onclick = ()=>{
+            widget.style.display = "block"; //display widget
+            post.style.display = "none"; //hide post
+          }
+          return false;
+        }
+      </script>  
+    <script>
+      /*Login Signup Change */
+      const username = localStorage.getItem('user-name');
+      if(localStorage.getItem("yes") == 1){
+      document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+      document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+      }
+  </script>
+
+</body>
+</html>

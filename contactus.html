@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a class="active" href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+</header>
+
+<div class="content">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.7471569184113!2d100.28140739999999!3d5.4552943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3ff9c43a8e3%3A0xfdc826d95f1ba6d3!2sPermai%20Jaya!5e0!3m2!1szh-CN!2smy!4v1694592567363!5m2!1szh-CN!2smy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="address">OUR LOCATION: Lebuh Kurau 5, Perai, 13700 Seberang Perai Tengah, Pulau Pinang</p>
+    </div>
+
+    <div class="heading">
+    <h1>Contact Us</h1>
+    <div class="info">
+        <p><img src="whatsapp icon.jpg"></i><a href="https://wa.me/+60124815582"> Whatsapp:  0124815582</a></p>
+        <p><img src="mail icon.jpg"></i><a href="mailto:haussellsfood@gmail.com"> Email:  haussellsfood@gmail.com</a></p>
+        <p><img src="insta icon.jpg"></i><a href="https://www.instagram.com/_haus___/"> Instagram:  _haus___</a></p>
+        <div class="time">Operation of hours:10.00a.m. to 10.00p.m. (Everyday)</div>
+    </div>
+    </div>
+    <script>
+        /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+        if(localStorage.getItem("yes") == 1){
+        document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+        document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;/*Let form move downward to the center of screen*/
+    min-height: 100vh;/*Background and form fullfill the screen*/
+    background: url(background2.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-container{
+    position: relative;
+    max-width: 400px;
+    border: 2px solid #6F5B3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;/*Let form move right to the center of screen*/
+    background-color: #fff5ee;
+    border-radius: 20px;
+    padding: 5rem 6rem;/*border width*/
+}
+
+h2{
+    color: #6F5B3E;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-boxes{
+    position: relative;
+    margin: 30px;
+    max-width: 310px;/*Content width*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-boxes label{
+    position: absolute;
+    top: 20%;
+    bottom: 5%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #6F5B3E;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#signup-username{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;/*border line disappear when entered form*/
+    font-size: 1rem;
+    padding: 0 35px 0 5px;/*Placeholder对齐标题*/
+    color: #6F5B3E;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+#signup-userid{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+#signup-gender{
+    width: 20%;
+    height: 20px;
+}
+
+.gender{
+    color: #6F5B3E;
+}
+
+#signup-birth{
+    width: 113%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding-left: 5px;
+}
+
+#signup-phone{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+#signup-email{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+#signup-password{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+#signup-rptpassword{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #6F5B3E;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid #6F5B3E;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #F9F6F0;
+    border-color: #6F5B3E;
+    cursor: pointer;/*hover become mouse condition*/
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover{
+    background-color: #D6CEC0;
+}
+
+.logincontainer{
+    font-size: 0.9rem;
+    color: #6F5B3E;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.logincontainer a{
+    text-decoration: none;
+    color: #6F5B3E;
+    font-weight: 600;
+}
+
+.logincontainer a:hover{
+    text-decoration: underline;
+}

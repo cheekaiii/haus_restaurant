@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CART</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a class="active" href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="space"></li>
+        <li class="login" id="profile"><a href="login.html">Login</a></li>
+        <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+</header>
+<div id="disBox">
+<div id="cartBox">
+    <div id="cartTitle">Your Cart</div>
+    <div id="carts">
+    <table id="cart">
+        <thead>
+          <th>Dish</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>Quantity</th>
+          <th></th>
+          <th>Price</th>
+          <th>Total Price</th>
+          </tr>
+        <thead>
+        <tr id="waffleDiv">
+                <td><button onclick="remove('waffle')">x</button></td>
+                <td><img src="waffle.jpg" alt="Waffle"></td>
+                <td>Waffle</td>
+                <td><button class="quantityButtons" onclick="plus('waffle')">+</button></td>
+                <td><span id="waffleDisplay"></span></td>
+                <td><button class="quantityButtons" onclick="minus('waffle')">-</button></td>
+                <td>RM 8.90</td>
+                <td>RM <span id="wafflePrice"></span></td>
+        </tr>
+        <tr id="iceCreamDiv">
+                <td><button onclick="remove('iceCream')">x</button></td>
+                <td><img src="ice cream.jpg" alt="Ice cream"></td>
+                <td>Ice Cream</td>
+                <td><button class="quantityButtons" onclick="plus('iceCream')">+</button></td>
+                <td><span id="iceCreamDisplay"></span></td>
+                <td><button class="quantityButtons" onclick="minus('iceCream')">-</button></td>
+                <td>RM 9.90</td>
+                <td>RM <span id="iceCreamPrice"></span></td>
+        </tr>
+        <tr id="nuggetDiv">
+            <td><button onclick="remove('nugget')">x</button></td>
+            <td><img src="nugget.jpg" alt="Nugget"></td>
+            <td>Nugget</td>
+            <td><button class="quantityButtons" onclick="plus('nugget')">+</button></td>
+            <td><span id="nuggetDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('nugget')">-</button></td>
+            <td>RM 6.90</td>
+            <td>RM <span id="nuggetPrice"></span></td>
+        </tr>
+        <tr id="soupDiv">
+            <td><button onclick="remove('soup')">x</button></td>
+            <td><img src="mushroom soup with garlic bread.jpg" alt="Mushroom Soup n Garlic Bread"></td>
+            <td>Mushroom Soup n Garlic Bread</td>
+            <td><button class="quantityButtons" onclick="plus('soup')">+</button></td>
+            <td><span id="soupDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('soup')">-</button></td>
+            <td>RM 14.90</td>
+            <td>RM <span id="soupPrice"></span></td>
+        </tr>
+        <tr id="saladDiv">
+            <td><button onclick="remove('salad')">x</button></td>
+            <td><img src="salad.jpg" alt="Salad"></td>
+            <td>Salad</td>
+            <td><button class="quantityButtons" onclick="plus('salad')">+</button></td>
+            <td><span id="saladDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('salad')">-</button></td>
+            <td>RM 12.90</td>
+            <td>RM <span id="saladPrice"></span></td>
+        </tr>
+        <tr id="friesDiv">
+            <td><button onclick="remove('fries')">x</button></td>
+            <td><img src="french fries.jpg" alt="French Fries"></td>
+            <td>French Fries</td>
+            <td><button class="quantityButtons" onclick="plus('fries')">+</button></td>
+            <td><span id="friesDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('fries')">-</button></td>
+            <td>RM 7.90</td>
+            <td>RM <span id="friesPrice"></span></td>
+        </tr>
+        <tr id="aglioOglioDiv">
+            <td><button onclick="remove('Spaghetti Aglio Oglio')">x</button></td>
+            <td><img src="aglio oglio.jpg"></td>
+            <td>Spaghetti Aglio Oglio</td>
+            <td><button class="quantityButtons" onclick="plus('Spaghetti Aglio Oglio')">+</button></td>
+            <td><span id="aglioOglioDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Spaghetti Aglio Oglio')">-</button></td>
+            <td>RM 12.90</td>
+            <td>RM <span id="aglioOglioPrice"></span></td>
+        </tr>        
+        <tr id="carbonaraDiv">
+            <td><button onclick="remove('Spaghetti Carbonara')">x</button></td>
+            <td><img src="cabonara.jpg"></td>
+            <td>Spaghetti Carbonara</td>
+            <td><button class="quantityButtons" onclick="plus('Spaghetti Carbonara')">+</button></td>
+            <td><span id="carbonaraDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Spaghetti Carbonara')">-</button></td>
+            <td>RM 16.90</td>
+            <td>RM <span id="carbonaraPrice"></span></td>
+        </tr>
+        <tr id="bologneseChickenDiv">
+            <td><button onclick="remove('Spaghetti Bolognese Chicken')">x</button></td>
+            <td><img src="chicken bolognese.jpg"></td>
+            <td>Spaghetti Bolognese Chicken</td>
+            <td><button class="quantityButtons" onclick="plus('Spaghetti Bolognese Chicken')">+</button></td>
+            <td><span id="bologneseChickenDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Spaghetti Bolognese Chicken')">-</button></td>
+            <td>RM 16.90</td>
+            <td>RM <span id="bologneseChickenPrice"></span></td>
+        </tr>
+        <tr id="charcoalBurgerDiv">
+            <td><button onclick="remove('Black Charcoal Burger')">x</button></td>
+            <td><img src="black charcoal burger.jpg"></td>
+            <td>Black Charcoal Burger</td>
+            <td><button class="quantityButtons" onclick="plus('Black Charcoal Burger')">+</button></td>
+            <td><span id="charcoalBurgerDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Black Charcoal Burger')">-</button></td>
+            <td>RM 22.90</td>
+            <td>RM <span id="charcoalBurgerPrice"></span></td>
+        </tr>        
+        <tr id="fishBurgerDiv">
+            <td><button onclick="remove('Fish Burger')">x</button></td>
+            <td><img src="fish burger.jpg"></td>
+            <td>Fish Burger</td>
+            <td><button class="quantityButtons" onclick="plus('Fish Burger')">+</button></td>
+            <td><span id="fishBurgerDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Fish Burger')">-</button></td>
+            <td>RM 20.90</td>
+            <td>RM <span id="fishBurgerPrice"></span></td>
+        </tr>        
+        <tr id="beefBurgerDiv">
+            <td><button onclick="remove('Beef Burger')">x</button></td>
+            <td><img src="beef burger.jpg"></td>
+            <td>Beef Burger</td>
+            <td><button class="quantityButtons" onclick="plus('Beef Burger')">+</button></td>
+            <td><span id="beefBurgerDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Beef Burger')">-</button></td>
+            <td>RM 22.90</td>
+            <td>RM <span id="beefBurgerPrice"></span></td>
+        </tr>
+        <tr id="mushroomChopDiv">
+            <td><button onclick="remove('Mushroom Chicken Chop')">x</button></td>
+            <td><img src="mushroom chicken chop.jpg"></td>
+            <td>Mushroom Chicken Chop</td>
+            <td><button class="quantityButtons" onclick="plus('Mushroom Chicken Chop')">+</button></td>
+            <td><span id="mushroomChopDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Mushroom Chicken Chop')">-</button></td>
+            <td>RM 24.90</td>
+            <td>RM <span id="mushroomChopPrice"></span></td>
+        </tr>
+        <tr id="lambChopDiv">
+            <td><button onclick="remove('Lamb Chop')">x</button></td>
+            <td><img src="lamb chop.jpg"></td>
+            <td>Lamb Chop</td>
+            <td><button class="quantityButtons" onclick="plus('Lamb Chop')">+</button></td>
+            <td><span id="lambChopDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Lamb Chop')">-</button></td>
+            <td>RM 59.90</td>
+            <td>RM <span id="lambChopPrice"></span></td>
+        </tr>
+        <tr id="fishChipsDiv">
+            <td><button onclick="remove('Fish and Chip')">x</button></td>
+            <td><img src="fish n chip.jpg"></td>
+            <td>Fish and Chip</td>
+            <td><button class="quantityButtons" onclick="plus('Fish and Chip')">+</button></td>
+            <td><span id="fishChipsDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Fish and Chip')">-</button></td>
+            <td>RM 28.90</td>
+            <td>RM <span id="fishChipsPrice"></span></td>
+        </tr>
+        <tr id="honeyLemonDiv">
+            <td><button onclick="remove('Honey Lemon')">x</button></td>
+            <td><img src="honey lemon.jpg"></td>
+            <td>Honey Lemon</td>
+            <td><button class="quantityButtons" onclick="plus('Honey Lemon')">+</button></td>
+            <td><span id="honeyLemonDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Honey Lemon')">-</button></td>
+            <td>RM 6.90</td>
+            <td>RM <span id="honeyLemonPrice"></span></td>
+        </tr>
+        <tr id="americanoDiv">
+            <td><button onclick="remove('Americano')">x</button></td>
+            <td><img src="americano.jpg"></td>
+            <td>Americano</td>
+            <td><button class="quantityButtons" onclick="plus('Americano')">+</button></td>
+            <td><span id="americanoDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Americano')">-</button></td>
+            <td>RM 11.90</td>
+            <td>RM <span id="americanoPrice"></span></td>
+        </tr>
+        <tr id="caramelMacchiatoDiv">
+            <td><button onclick="remove('Caramel Macchiato')">x</button></td>
+            <td><img src="caramel macchiato.jpg"></td>
+            <td>Caramel Macchiato</td>
+            <td><button class="quantityButtons" onclick="plus('Caramel Macchiato')">+</button></td>
+            <td><span id="caramelMacchiatoDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Caramel Macchiato')">-</button></td>
+            <td>RM 19.90</td>
+            <td>RM <span id="caramelMacchiatoPrice"></span></td>
+        </tr>
+        <tr id="chocolateMilkshakeDiv">
+            <td><button onclick="remove('Chocolate Milkshake')">x</button></td>
+            <td><img src="chocalate milkshake.jpg"></td>
+            <td>Chocolate Milkshake</td>
+            <td><button class="quantityButtons" onclick="plus('Chocolate Milkshake')">+</button></td>
+            <td><span id="chocolateMilkshakeDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Chocolate Milkshake')">-</button></td>
+            <td>RM 16.90</td>
+            <td>RM <span id="chocolateMilkshakePrice"></span></td>
+        </tr>
+        <tr id="fruitTeaDiv">
+            <td><button onclick="remove('Fruit Tea')">x</button></td>
+            <td><img src="fruittea.jpg"></td>
+            <td>Fruit Tea</td>
+            <td><button class="quantityButtons" onclick="plus('Fruit Tea')">+</button></td>
+            <td><span id="fruitTeaDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Fruit Tea')">-</button></td>
+            <td>RM 16.90</td>
+            <td>RM <span id="fruitTeaPrice"></span></td>
+        </tr>
+        <tr id="mochaDiv">
+            <td><button onclick="remove('Mocha')">x</button></td>
+            <td><img src="mocha.jpg"></td>
+            <td>Mocha</td>
+            <td><button class="quantityButtons" onclick="plus('Mocha')">+</button></td>
+            <td><span id="mochaDisplay"></span></td>
+            <td><button class="quantityButtons" onclick="minus('Mocha')">-</button></td>
+            <td>RM 16.90</td>
+            <td>RM <span id="mochaPrice"></span></td>
+        </tr>
+        <tr>
+        <td colspan="8">
+            <button class="widthButton" onclick="goMenu()">Add Items</button>
+        </td>
+      </tr>
+    </table>
+</div>
+</div>
+</div>
+<div id="cartInterface">
+    <img src="menucover background.png">
+    <div id="grandTotalH"><h1>Grand Total</h1></div>
+    <div>RM <span id="grandTotal"></span></div>
+    <button class="widthButton" onclick="goPayment()">Use Vouchers</button>
+    <button class="widthButton" onclick="goPrint()">Print Recipt</button>
+</div>
+<script>
+    let items = JSON.parse(localStorage.getItem("items"))||{}
+    
+    function plus(item) {
+        items[item] = (items[item]) + 1;
+        localStorage.setItem("items", JSON.stringify(items));
+        update();
+    }
+    function minus(item) {
+        items[item] = (items[item]) - 1;
+        localStorage.setItem("items", JSON.stringify(items));
+        update();
+    }
+    function remove(item) {
+        items[item] = (items[item]) - (items[item]);
+        localStorage.setItem("items", JSON.stringify(items));
+        update();
+    }
+    
+    function goMenu() {
+        location.href = "menucover.html";
+    }
+
+    function update() {
+        document.getElementById("waffleDisplay").textContent = items["waffle"];
+        document.getElementById("waffleDiv").style.display = items["waffle"] > 0 ? "" : "none";
+        document.getElementById("wafflePrice").textContent = (items["waffle"] * 8.90).toFixed(2);
+
+        document.getElementById("iceCreamDisplay").textContent = items["iceCream"];
+        document.getElementById("iceCreamDiv").style.display = items["iceCream"] > 0 ? "" : "none";
+        document.getElementById("iceCreamPrice").textContent = (items["iceCream"] * 9.90).toFixed(2);  
+
+        document.getElementById("nuggetDisplay").textContent = items["nugget"];
+        document.getElementById("nuggetDiv").style.display = items["nugget"] > 0 ? "" : "none";
+        document.getElementById("nuggetPrice").textContent = (items["nugget"] * 6.90).toFixed(2);
+
+        document.getElementById("soupDisplay").textContent = items["soup"];
+        document.getElementById("soupDiv").style.display = items["soup"] > 0 ? "" : "none";
+        document.getElementById("soupPrice").textContent = (items["soup"] * 14.90).toFixed(2);
+
+        document.getElementById("saladDisplay").textContent = items["salad"];
+        document.getElementById("saladDiv").style.display = items["salad"] > 0 ? "" : "none";
+        document.getElementById("saladPrice").textContent = (items["salad"] * 12.90).toFixed(2);
+
+        document.getElementById("friesDisplay").textContent = items["fries"];
+        document.getElementById("friesDiv").style.display = items["fries"] > 0 ? "" : "none";
+        document.getElementById("friesPrice").textContent = (items["fries"] * 7.90).toFixed(2);
+
+        document.getElementById("aglioOglioDisplay").textContent = items["Spaghetti Aglio Oglio"];
+        document.getElementById("aglioOglioDiv").style.display = items["Spaghetti Aglio Oglio"] > 0 ? "" : "none";
+        document.getElementById("aglioOglioPrice").textContent = (items["Spaghetti Aglio Oglio"] * 12.90).toFixed(2);
+
+        document.getElementById("carbonaraDisplay").textContent = items["Spaghetti Carbonara"];
+        document.getElementById("carbonaraDiv").style.display = items["Spaghetti Carbonara"] > 0 ? "" : "none";
+        document.getElementById("carbonaraPrice").textContent = (items["Spaghetti Carbonara"] * 16.90).toFixed(2);
+
+        document.getElementById("bologneseChickenDisplay").textContent = items["Spaghetti Bolognese Chicken"];
+        document.getElementById("bologneseChickenDiv").style.display = items["Spaghetti Bolognese Chicken"] > 0 ? "" : "none";
+        document.getElementById("bologneseChickenPrice").textContent = (items["Spaghetti Bolognese Chicken"] * 16.90).toFixed(2);
+
+        document.getElementById("charcoalBurgerDisplay").textContent = items["Black Charcoal Burger"];
+        document.getElementById("charcoalBurgerDiv").style.display = items["Black Charcoal Burger"] > 0 ? "" : "none";
+        document.getElementById("charcoalBurgerPrice").textContent = (items["Black Charcoal Burger"] * 22.90).toFixed(2);
+
+        document.getElementById("fishBurgerDisplay").textContent = items["Fish Burger"];
+        document.getElementById("fishBurgerDiv").style.display = items["Fish Burger"] > 0 ? "" : "none";
+        document.getElementById("fishBurgerPrice").textContent = (items["Fish Burger"] * 20.90).toFixed(2);
+
+        document.getElementById("beefBurgerDisplay").textContent = items["Beef Burger"];
+        document.getElementById("beefBurgerDiv").style.display = items["Beef Burger"] > 0 ? "" : "none";
+        document.getElementById("beefBurgerPrice").textContent = (items["Beef Burger"] * 22.90).toFixed(2);
+
+        document.getElementById("mushroomChopDisplay").textContent = items["Mushroom Chicken Chop"];
+        document.getElementById("mushroomChopDiv").style.display = items["Mushroom Chicken Chop"] > 0 ? "" : "none";
+        document.getElementById("mushroomChopPrice").textContent = (items["Mushroom Chicken Chop"] * 24.90).toFixed(2);
+
+        document.getElementById("lambChopDisplay").textContent = items["Lamb Chop"];
+        document.getElementById("lambChopDiv").style.display = items["Lamb Chop"] > 0 ? "" : "none";
+        document.getElementById("lambChopPrice").textContent = (items["Lamb Chop"] * 59.90).toFixed(2);
+
+        document.getElementById("fishChipsDisplay").textContent = items["Fish and Chip"];
+        document.getElementById("fishChipsDiv").style.display = items["Fish and Chip"] > 0 ? "" : "none";
+        document.getElementById("fishChipsPrice").textContent = (items["Fish and Chip"] * 28.90).toFixed(2);
+
+        document.getElementById("honeyLemonDisplay").textContent = items["Honey Lemon"];
+        document.getElementById("honeyLemonDiv").style.display = items["Honey Lemon"] > 0 ? "" : "none";
+        document.getElementById("honeyLemonPrice").textContent = (items["Honey Lemon"] * 6.90).toFixed(2);
+
+        document.getElementById("americanoDisplay").textContent = items["Americano"];
+        document.getElementById("americanoDiv").style.display = items["Americano"] > 0 ? "" : "none";
+        document.getElementById("americanoPrice").textContent = (items["Americano"] * 11.90).toFixed(2);
+
+        document.getElementById("caramelMacchiatoDisplay").textContent = items["Caramel Macchiato"];
+        document.getElementById("caramelMacchiatoDiv").style.display = items["Caramel Macchiato"] > 0 ? "" : "none";
+        document.getElementById("caramelMacchiatoPrice").textContent = (items["Caramel Macchiato"] * 19.90).toFixed(2);
+
+        document.getElementById("chocolateMilkshakeDisplay").textContent = items["Chocolate Milkshake"];
+        document.getElementById("chocolateMilkshakeDiv").style.display = items["Chocolate Milkshake"] > 0 ? "" : "none";
+        document.getElementById("chocolateMilkshakePrice").textContent = (items["Chocolate Milkshake"] * 16.90).toFixed(2);
+
+        document.getElementById("fruitTeaDisplay").textContent = items["Fruit Tea"];
+        document.getElementById("fruitTeaDiv").style.display = items["Fruit Tea"] > 0 ? "" : "none";
+        document.getElementById("fruitTeaPrice").textContent = (items["Fruit Tea"] * 16.90).toFixed(2);
+
+        document.getElementById("mochaDisplay").textContent = items["Mocha"];
+        document.getElementById("mochaDiv").style.display = items["Mocha"] > 0 ? "" : "none";
+        document.getElementById("mochaPrice").textContent = (items["Mocha"] * 16.90).toFixed(2);
+
+        items["total"] = ((items["waffle"]||0) * 8.90 +
+                (items["iceCream"]||0) * 9.90 +
+                (items["nugget"]||0) * 6.90 +
+                (items["soup"]||0) * 14.90 +
+                (items["salad"]||0) * 12.90 +
+                (items["fries"]||0) * 7.90 +
+                (items["Spaghetti Aglio Oglio"]||0) * 12.90 +
+                (items["Spaghetti Carbonara"]||0) * 16.90 +
+                (items["Spaghetti Bolognese Chicken"]||0) * 16.90 +
+                (items["Black Charcoal Burger"]||0) * 22.90 +
+                (items["Fish Burger"]||0) * 20.90 +
+                (items["Beef Burger"]||0) * 22.90 +
+                (items["Mushroom Chicken Chop"]||0) * 24.90 +
+                (items["Lamb Chop"]||0) * 59.90 +
+                (items["Fish and Chip"]||0) * 28.90 +
+                (items["Honey Lemon"]||0) * 6.90 +
+                (items["Americano"]||0) * 11.90 +
+                (items["Caramel Macchiato"]||0) * 19.90 +
+                (items["Chocolate Milkshake"]||0) * 16.90 +
+                (items["Fruit Tea"]||0) * 16.90 +
+                (items["Mocha"]||0) * 16.90).toFixed(2);
+                document.getElementById("grandTotal").textContent = items["total"]
+        items["newTotal"] = items["total"]
+        items["voucherC"] = 4
+        localStorage.setItem("items", JSON.stringify(items));
+    }
+
+    update();
+        
+    function goPayment() {
+        location.href = "recipt.html";
+    }
+
+    
+    function goPrint() {
+        location.href = "print.html";
+    }
+
+    </script>
+    <script>
+            /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+        if(localStorage.getItem("yes") == 1){
+        document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+        document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+        }
+    </script>
+
+</body>
+</html>

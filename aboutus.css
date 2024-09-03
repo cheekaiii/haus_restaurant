@@ -1,0 +1,347 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/*History Style*/
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: #C4AE78;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;/*Underline*/
+    background-color: #6F5B3E;
+}
+
+.heading p{
+    font-size: 18px;
+    color: #6F5B3E;
+    margin-bottom: 40px;
+}
+
+.aboutus-container{
+    width: 90%;
+    margin: 0 auto;/*Center the picture and history*/
+}
+
+.aboutus{
+    display: flex;/*Let picture and history left right*/
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aboutus-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.aboutus-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.aboutus-image:hover img{
+    transform: scale(1,2);
+}
+
+.aboutus-content{
+    flex: 1;
+}
+
+.aboutus-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #C4AE78;
+    text-align: center;
+}
+
+.aboutus-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6F5B3E;
+}
+
+/*Achievement Style*/
+.heading-achievement h2{
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #F9F6F0;
+    text-align: center;
+    background-color: #6F5B3E;
+    transition: all 1s ease-in-out;
+}
+
+.achievement-container,
+.achievement-container li {
+	position: relative;
+}
+
+.achievement-container:after,
+.achievement-container li:before,
+.achievement-container li > div:before,
+.achievement-container li:first-child div:after,
+.achievement-container li:last-child div:after {
+	content: '';
+	position: absolute;
+}
+
+/* color */
+.achievement-container li > div,
+.achievement-container li:before,
+.achievement-container li > div:before,
+.achievement-container:after {
+	background-color: #C4AE78;
+}
+
+.achievement-container:after,
+.achievement-container li small,
+.achievement-container li:first-child div:after,
+.achievement-container li:last-child div:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.achievement-container li small,
+.achievement-container li > div:before {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*clearfix*/
+.achievement-container li:after {
+	clear: both;
+	content:'';
+	display: table;
+}
+
+.achievement-container li {
+	margin: 60px 0;
+}
+
+.achievement-container li:first-child {
+	margin-top: 0;
+}
+
+.achievement-container li:last-child {
+	margin-bottom: 0;
+}
+
+/*Timeline content*/
+.achievement-container li > div {
+	width: 40%;
+	padding: 15px 25px;
+	border-radius: 1px;
+}
+
+.achievement-container li > div > h4,
+.achievement-container li > div > small{
+    color: #6F5B3E;
+    text-align: center;
+    font-size: 20px;
+}
+
+.achievement-container li > div > p{
+    color: #F9F6F0;
+}
+
+.achievement-container li:nth-child(odd) > div {
+	float: left;
+}
+
+.achievement-container li:nth-child(even) > div {
+	float: right;
+}
+
+/*Main vertical line middile*/
+.achievement-container:after {
+	width: 2px;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+/*Date*/
+.achievement-container li small {
+	position: absolute;
+	color: #F9F6F0;
+	font-size: 13px;
+	font-weight: 600;
+	margin-left: 20px;
+    transition: all 0.5s ease;
+}
+
+.achievement-container li:nth-child(even) small {
+	margin-left: 0;
+	left: auto;
+	right: 50%;
+	margin-right: 20px;
+}
+
+/*Square of timeline*/
+.achievement-container li:before {
+	height: 7px;
+	width: 8px;
+	border: 3px solid white;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*Horizontal line*/
+.achievement-container li > div:before {
+	height: 2px;
+	left: 40%;
+	width: 10%;
+}
+
+.achievement-container li:nth-child(even) div:before {
+	left: auto;
+	right: 40%;
+}
+
+/*To be continue*/
+.continue div{
+    font-weight: bold;
+    text-align: center;
+    color: #6F5B3E;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*Staff style*/
+.heading-staff h2{
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #F9F6F0;
+    text-align: center;
+    background-color: #6F5B3E;
+    transition: all 1s ease-in-out;
+}
+
+.staff-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-content{
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    margin: 8px;
+    border: 2px solid #6F5B3E;
+    border-radius: 16px;
+    position: relative;
+}
+
+.staff-content::before{
+    content: '';
+    background-color: #d6cec0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.staff-content img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 480px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.staff-content:hover img{
+    width: 160px;
+    height: 240px;
+    border: 2px solid #6F5B3E;
+    left: 80px;
+    top: 60px;
+}
+
+.staff-content .staff-info{
+    background-color: #F9F6F0;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #6F5B3E;
+    padding: 16px;
+    border-top: 8px solid #6F5B3E;
+    border-radius: 50% 50% 0px 0px;
+    padding-top: 80px;
+    text-align: center;
+    transform: scale(1);
+    font-size: 17px;
+}
+
+.staff-content .name{
+    font-size: 24px;
+    padding: 16px;
+    text-transform: capitalize;
+}
+
+.staff-content .title{
+    color: #C4AE78;
+    text-transform: capitalize;
+}
+
+.staff-content:hover .staff-info{
+    transform: scale(1);
+}
+
+.staff-content .social{
+    padding-block: 16px;
+    font-size: 24px;
+}
+
+.staff-content .social i{
+    display: inline-block;
+    width: 48px;
+    padding: 12px;
+    background-color: #F9F6F0;
+    border-radius: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.staff-content .social i:hover{
+    color: white;
+    background-color: #C4AE78;
+}

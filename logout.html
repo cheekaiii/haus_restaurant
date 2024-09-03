@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>LOGOUT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="logout.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+<div>
+    <img src="logout.png" alt="logout">
+    <p>Oh No!  You are leaving Haus...<br> Are you sure?</p>
+    <button type="button" id="cancel" onclick="history.back()">No, I am just kidding</button>
+    <button type="button" id="logout" onclick="logout()">Yes, Log Me Out</button>
+</div>
+<script>
+    function logout(){
+        alert("You are now logged out.");
+        localStorage.setItem("yes",0);
+        window.location.href="events.html";
+    }
+</script>
+</body>
+</html>

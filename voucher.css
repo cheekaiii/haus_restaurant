@@ -1,0 +1,130 @@
+/*VERTICAL NAVIGATION STYLE*/
+ul.verticalnav{
+    display: block;
+    float:left;
+    width:20%;
+    height:92vh;
+    list-style-type: none;
+    padding:15% 0;
+    background-color: #F9F6F0;
+    border-right: 10px double #6F5B3E;
+  }
+  ul.verticalnav li{
+    padding-top: 9%;
+    padding-bottom: 9%;
+    font-size: larger;
+  }
+ul.verticalnav li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+  }
+  ul.verticalnav li a.active{
+    color: #C4AE78;
+    font-size: x-large;
+    text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.9);
+  }
+  ul.verticalnav li a:hover{
+    color: #6F5B3E;
+    font-size: larger;
+    text-shadow: 2px 2px 2px #C4AE78;
+  }
+  
+/*CONTENT FORMAT STYLE*/
+div.background{
+    width:80%;
+    height: 92vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.info{
+    width:80%;
+    height:80vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:60px;
+    border-radius: 15px;
+    outline:3px dashed #6F5B3E;
+    outline-offset: -30px;
+}
+/*VOUCHER STYLE*/
+.container{
+    width: 100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    -ms-overflow-style: none;   
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.vouchercard{
+    background: linear-gradient(135deg, #D6C099, #D6CEC0);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15);
+    position: relative; 
+    width:90%;
+    margin: 20px auto;
+}
+.logo{
+    width: 100px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    float:left;
+    margin-left:50px;
+    margin-top: 30px;
+}
+.vouchercard h3{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+
+}
+.vouchercard p{
+    font-size: 15px;
+
+}
+.voucher-row{
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+    width: fit-content;
+}
+.code{
+    border: 1px dashed white;
+    padding: 10px 20px;
+    border-right: 0;
+
+}
+.copycode{
+    border: 1px solid white;
+    background: #fff;
+    padding: 10px 20px;
+    color: #C4AE78;
+    cursor: pointer;
+}
+.circle1, .circle2{
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.circle1{
+    left: -15px;
+}
+.circle2{
+    right: -15px;
+}

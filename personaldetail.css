@@ -1,0 +1,112 @@
+/*VERTICAL NAVIGATION STYLE*/
+ul.verticalnav{
+  display: block;
+  float:left;
+  width:20%;
+  height:92vh;
+  list-style-type: none;
+  padding:15% 0;
+  background-color: #F9F6F0;
+  border-right: 10px double #6F5B3E;
+}
+ul.verticalnav li{
+  padding-top: 9%;
+  padding-bottom: 9%;
+  font-size: larger;
+}
+ul.verticalnav li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 1000;
+
+}
+ul.verticalnav li a.active{
+  color: #C4AE78;
+  font-size: x-large;
+  text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.9);
+}
+ul.verticalnav li a:hover{
+  color: #6F5B3E;
+  font-size: larger;
+  text-shadow: 2px 2px 2px #C4AE78;
+}
+
+  /*CONTENT STYLE*/
+div.background{
+width:80%;
+height: 92vh;
+background-image: url(background.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+div.info{
+width:80%;
+height:80vh;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+padding:60px;
+border-radius: 15px;
+outline:3px dashed #6F5B3E;
+outline-offset: -30px;
+}
+div.details{
+    width: 60%;
+    float:left;
+  }
+  div.details ul{
+    list-style-type: none;
+    border-right: 3px solid black;
+    padding-left:10%;
+    padding-right:10%;
+  }
+  div.details ul li{
+    text-align: left;
+    font-weight:bold;
+    font-size: 22px;
+    padding-bottom:25px;
+    color: #C4AE78;
+  }
+  .text{
+    font-weight: lighter;
+    color: #000;
+  }
+
+  .card{
+    margin-left:5%;
+    width:400px;
+    padding:40px;
+    border-radius: 15px;
+    text-align: center;
+    color:#333;
+  }
+  .card h1{
+    font-weight: 500px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .card img{
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    margin-top:40px;
+    margin-bottom: 30px;
+  }
+  label{
+    display: block;
+    width: 200px;
+    background-color: #C4AE78;
+    color:white;
+    padding:12px;
+    margin:10px auto;
+    border-radius: 5px;
+    cursor:pointer;
+  }
+  input{
+    display: none;
+  }
+  

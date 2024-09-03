@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="reset.css" rel="stylesheet" type="text/css"/>
+    <link href="headernav.css" rel="stylesheet" type="text/css"/>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="logo.png">
+
+<style>
+body {
+    background-color: #F9F6F0;
+    text-align: unset;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+h1 {
+    position: relative;
+    font-size: 8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: left;
+    line-height: 64%;
+    padding: 105px 0 0 0;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+    background-color: #F9F6F0;
+}
+
+.left1 {
+    width: 39%;
+    display: flex;
+}
+
+.right {
+    width: 55%;
+}
+
+.gold {
+    padding-left: 10px;
+    color: #c4ae78;
+}
+
+#specialty {
+    color: #6f5b3e;
+    font-size: 0.6em;
+}
+
+p {
+    font-size: 17px;
+    padding-top: 17px;
+    line-height: 1.3em;
+}
+
+.spinning {
+    transition: transform 1s;
+}
+
+.spinning:hover {
+    transform: rotate(360deg) translateZ(0);
+}
+
+.orderb {
+    width: 25%;
+    background-color: #6f5b3e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    color: #F9F6F0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.orderb:hover {
+    background-color: #F9F6F0;
+    color: #6f5b3e;
+    border: 2px solid #6f5b3e;
+}
+
+#month {
+    font-size: 4.9em;
+    line-height: 77%;
+    color: #F9F6F0;
+    padding: 19% 0 0 12%;
+}
+
+.slidesize {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+#vid {
+    font-size: 4.2em;
+    line-height: 77%;
+    color: #6f5b3e;
+    padding: 28% 0 0 30%;
+}
+
+</style>
+</head>
+
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="homeslides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="home1.gif" class="slidesize">
+        </div>
+        
+        <div class="homeslides fade">
+          <div class="numbertext">2 / 4</div>
+          <a href="events.html" title="Events">
+          <img src="home2.GIF" class="slidesize">
+        </a>
+        </div>
+        
+        <div class="homeslides fade">
+          <div class="numbertext">3 / 4</div>
+          <a href="signup.html" title="Sign Up">
+          <img src="home3.gif" class="slidesize">
+        </a>
+        </div>
+
+        <div class="homeslides fade">
+            <div class="numbertext">4 / 4</div>
+            <a href="aboutus.html" title="About us">
+            <img src="home4.gif" class="slidesize">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+
+<div class="body">
+        <div class="left">
+            <img src="special.png" class="spinning" usemap="#image-map">
+            <map name="image-map">
+                <area alt="Spaghetti Bolognese Chicken" title="Spaghetti Bolognese Chicken" href="maindishes.html#bolog" coords="266,264,188" shape="circle">
+            </map>
+        </div>
+        <div class="right">
+            <h1>HAUS<span class="gold">’</span><br><span id="specialty">SPECIALTY</span><br></h1>
+            <p>Savory, slow-cooked meat sauce, simmered to perfection with<br>aromatic herbs and ripe tomatoes, generously ladled over a bed<br>of tender, al dente spaghetti.</p>
+            <a href="maindishes.html" class="orderb">Order now</a>
+        </div>
+    </div>
+
+    <div class="body" style="width:100%;background-color: #ae8781;">
+        <div class="left1">
+            <h1 id="month">THIS<br>MONTH'S<br>SPECIAL</h1>
+        </div>
+        <div style="width:28%">
+            <img src="m1.png" class="spinning" usemap="#monthspecial1">
+        </div>
+        <div style="width:30%">
+            <img src="m2.png" class="spinning" usemap="#monthspecial2">
+        </div>
+        <map name="monthspecial1">
+            <area title="Mushroom Chicken Chop" href="maindishes.html#cchop" coords="200,196,149" shape="circle">
+        </map>
+        <map name="monthspecial2">
+            <area title="Fish and Chip" href="maindishes.html#fish" coords="200,196,149" shape="circle">
+        </map>
+    </div>
+
+    <div class="body">
+        <div width="60%">
+            <video autoplay muted controls loop src="hausvid.mp4" width="550px" style="margin:10%;">
+        </div>
+        <div width="40%">
+            <h1 id="vid"><span style="font-size: 1.6em;"><span style="color:#171515">HAUS</span><span class="gold">’</span></span><br></h1>
+            <h1 id="vid" style="padding-top: 15px;">SATISFIED<br>CUSTOMERS</h1>
+        </div>
+    </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+    
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+    
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+    
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("homeslides");
+                let dots = document.getElementsByClassName("dot");
+    
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+    
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" activedot", "");
+                }
+    
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " activedot";
+            }
+    
+            // Automatically change slides every 4 seconds
+            setInterval(function() {
+                plusSlides(1);
+            }, 4000);
+
+
+        /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+        if(localStorage.getItem("yes") == 1){
+        document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+        document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>SIGN UP</title>
+        <link rel="icon" href="logo.png">
+        <link href="signup.css" rel="stylesheet"/>
+        </head>
+        <body>
+            <div class="signup-container">
+                <form id="signup" >
+                    <h2>Sign Up</h2>
+                    <div class="form-boxes">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" placeholder="Full Name" name="signup-username" required>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-userid">User ID</label>
+                        <input type="text" id="signup-userid" placeholder="Maximum 6 characters" name="signup-userid" required>
+                    </div>
+                    <div class="form-boxes">
+                        <input type="radio" id="signup-gender" name="signup-gender" value="Male" required><span class="gender">Male</span>
+                        <input type="radio" id="signup-gender" name="signup-gender" value="Female" required><span class="gender">Female</span>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-birth">Birthday</label>
+                        <input type="date" id="signup-birth" name="signup-birth" required>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-phone">Phone Number</label>
+                        <input type="text" id="signup-phone" placeholder="XXX-XXXXXXX" name="signup-phone" required>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="signup-email" required>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Minimum 8 characters" name="signup-password" required>
+                    </div>
+                    <div class="form-boxes">
+                        <label for="signup-rptpassword">Repeat Password</label>
+                        <input type="password" id="signup-rptpassword" name="signup-rptpassword" required>
+                    </div>
+                    <button type="submit">Register</button>
+                    <div class="logincontainer">
+                        <p>Have an account?</p>
+                        <a href="login.html">Login</a>
+                      </div>
+                </form>
+                <script>
+                    const form=document.getElementById("signup");
+                    const username=document.getElementById("signup-username");
+                    const userID=document.getElementById("signup-userid");
+                    const birthday=document.getElementById("signup-birth");
+                    const email=document.getElementById("signup-email");
+                    const contact=document.getElementById("signup-phone");
+                    const password = document.getElementById("signup-password");
+                    const rptPassword = document.getElementById("signup-rptpassword");
+                    
+                    form.addEventListener("submit",function(e){
+                        e.preventDefault();
+            
+                        const usernameV= username.value;
+                        const userIDV=userID.value;
+                        const birthdayV=birthday.value;
+                        const emailV=email.value;
+                        const contactV=contact.value;
+                        const passwordV = password.value;
+                        const rptPasswordV = rptPassword.value;
+
+                        // User ID validation
+                        if (userIDV.length > 6) {
+                        alert("User ID maximum 6 characters long.");
+                        return; // Prevent form submission
+                        }
+                        
+                        // Password validation
+                        if (passwordV.length < 8) {
+                            alert("Password minimum 8 characters long.");
+                            return; // Prevent form submission
+                        }
+
+                        if (passwordV !== rptPasswordV) {
+                            alert("Password does not match.");
+                            return; // Prevent form submission
+                        }
+            
+                        localStorage.setItem('user-name',usernameV);
+                        localStorage.setItem('user-ID',userIDV);
+                        localStorage.setItem('birth-day',birthdayV);
+                        localStorage.setItem('e-mail',emailV);
+                        localStorage.setItem('con-tact',contactV);
+                        localStorage.setItem('yes',1);
+                        localStorage.setItem('password',passwordV);
+
+                        window.location.href="personaldetail.html";
+                        window.alert("Register Successfully");
+                    })
+                </script>
+        </body>
+</html>

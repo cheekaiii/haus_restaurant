@@ -1,0 +1,371 @@
+
+<!doctype html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RECEIPT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="stylesheet" href="print.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+  <header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a class="active" href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="space"></li>
+        <li class="login" id="profile"><a href="login.html">Login</a></li>
+        <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+</header>
+  <div id="disBox">
+    <div id="cartBox">
+        <div id="cartTitle">RECEIPT</div>
+        <div id="carts">
+        <table id="cart">
+            <thead>
+              <th>Dish</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total Price</th>
+              </tr>
+            <thead>
+            <tr id="waffleDiv">
+                    <td>Waffle</td>
+                    <td><span id="waffleDisplay"></span></td>
+                    <td>RM 8.90</td>
+                    <td>RM <span id="wafflePrice"></span></td>
+            </tr>
+            <tr id="iceCreamDiv">
+                    <td>Ice Cream</td>
+                    <td><span id="iceCreamDisplay"></span></td>
+                    <td>RM 9.90</td>
+                    <td>RM <span id="iceCreamPrice"></span></td>
+            </tr>
+            <tr id="nuggetDiv">
+                <td>Nugget</td>
+                <td><span id="nuggetDisplay"></span></td>
+                <td>RM 6.90</td>
+                <td>RM <span id="nuggetPrice"></span></td>
+            </tr>
+            <tr id="soupDiv">
+                <td>Mushroom Soup n Garlic Bread</td>
+                <td><span id="soupDisplay"></span></td>
+                <td>RM 14.90</td>
+                <td>RM <span id="soupPrice"></span></td>
+            </tr>
+            <tr id="saladDiv">
+                <td>Salad</td>
+                <td><span id="saladDisplay"></span></td>
+                <td>RM 12.90</td>
+                <td>RM <span id="saladPrice"></span></td>
+            </tr>
+            <tr id="friesDiv">
+                <td>French Fries</td>
+                <td><span id="friesDisplay"></span></td>
+                <td>RM 7.90</td>
+                <td>RM <span id="friesPrice"></span></td>
+            </tr>
+            <tr id="aglioOglioDiv">
+                <td>Spaghetti Aglio Oglio</td>
+                <td><span id="aglioOglioDisplay"></span></td>
+                <td>RM 12.90</td>
+                <td>RM <span id="aglioOglioPrice"></span></td>
+            </tr>        
+            <tr id="carbonaraDiv">
+                <td>Spaghetti Carbonara</td>
+                <td><span id="carbonaraDisplay"></span></td>
+                <td>RM 16.90</td>
+                <td>RM <span id="carbonaraPrice"></span></td>
+            </tr>
+            <tr id="bologneseChickenDiv">
+                <td>Spaghetti Bolognese Chicken</td>
+                <td><span id="bologneseChickenDisplay"></span></td>
+                <td>RM 16.90</td>
+                <td>RM <span id="bologneseChickenPrice"></span></td>
+            </tr>
+            <tr id="charcoalBurgerDiv">
+                <td>Black Charcoal Burger</td>
+                <td><span id="charcoalBurgerDisplay"></span></td>
+                <td>RM 22.90</td>
+                <td>RM <span id="charcoalBurgerPrice"></span></td>
+            </tr>        
+            <tr id="fishBurgerDiv">
+                <td>Fish Burger</td>
+                <td><span id="fishBurgerDisplay"></span></td>
+                <td>RM 20.90</td>
+                <td>RM <span id="fishBurgerPrice"></span></td>
+            </tr>        
+            <tr id="beefBurgerDiv">
+                <td>Beef Burger</td>
+                <td><span id="beefBurgerDisplay"></span></td>
+                <td>RM 22.90</td>
+                <td>RM <span id="beefBurgerPrice"></span></td>
+            </tr>
+            <tr id="mushroomChopDiv">
+                <td>Mushroom Chicken Chop</td>
+                <td><span id="mushroomChopDisplay"></span></td>
+                <td>RM 24.90</td>
+                <td>RM <span id="mushroomChopPrice"></span></td>
+            </tr>
+            <tr id="lambChopDiv">
+                <td>Lamb Chop</td>
+                <td><span id="lambChopDisplay"></span></td>
+                <td>RM 59.90</td>
+                <td>RM <span id="lambChopPrice"></span></td>
+            </tr>
+            <tr id="fishChipsDiv">
+                <td>Fish and Chip</td>
+                <td><span id="fishChipsDisplay"></span></td>
+                <td>RM 28.90</td>
+                <td>RM <span id="fishChipsPrice"></span></td>
+            </tr>
+            <tr id="honeyLemonDiv">
+                <td>Honey Lemon</td>
+                <td><span id="honeyLemonDisplay"></span></td>
+                <td>RM 6.90</td>
+                <td>RM <span id="honeyLemonPrice"></span></td>
+            </tr>
+            <tr id="americanoDiv">
+                <td>Americano</td>
+                <td><span id="americanoDisplay"></span></td>
+                <td>RM 11.90</td>
+                <td>RM <span id="americanoPrice"></span></td>
+            </tr>
+            <tr id="caramelMacchiatoDiv">
+                <td>Caramel Macchiato</td>
+                <td><span id="caramelMacchiatoDisplay"></span></td>
+                <td>RM 19.90</td>
+                <td>RM <span id="caramelMacchiatoPrice"></span></td>
+            </tr>
+            <tr id="chocolateMilkshakeDiv">
+                <td>Chocolate Milkshake</td>
+                <td><span id="chocolateMilkshakeDisplay"></span></td>
+                <td>RM 16.90</td>
+                <td>RM <span id="chocolateMilkshakePrice"></span></td>
+            </tr>
+            <tr id="fruitTeaDiv">
+                <td>Fruit Tea</td>
+                <td><span id="fruitTeaDisplay"></span></td>
+                <td>RM 16.90</td>
+                <td>RM <span id="fruitTeaPrice"></span></td>
+            </tr>
+            <tr id="mochaDiv">
+                <td>Mocha</td>
+                <td><span id="mochaDisplay"></span></td>
+                <td>RM 16.90</td>
+                <td>RM <span id="mochaPrice"></span></td>
+            </tr>
+          <tr>
+            <td colspan="1">
+                <div>Total</div>
+            </td>
+            <td colspan="2"></td>
+            <td colspan="1">
+                RM<span id="grandTotal"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="1">
+                <div id="promo"></div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1">
+                <div>Grand Total</div>
+            </td>
+            <td colspan="2"></td>
+            <td colspan="1">
+                RM<span id="newTotal"></span>
+            </td>
+          </tr>
+          
+        </table>
+        </div>
+    </div>
+    </div>
+  <div id="disInterface">
+    <img src="menucover background.png">
+    <button class="widthButton" onclick="printSection()">Print Recipt</button>
+    <button class="widthButton" onclick="goCart()">Finish</button>
+  </div>
+<script>
+    let items = JSON.parse(localStorage.getItem("items"))||{}
+    promo = document.getElementById("promo");
+    var vouchcode = items["voucherC"];
+    update();
+
+    function voucher() {
+        if (vouchcode === 1) {
+            promo.textContent = "- 30%";
+        } else if (vouchcode === 2) {
+            document.getElementById("honeyLemonDisplay").textContent = items["Honey Lemon"]*2;
+            document.getElementById("americanoDisplay").textContent = items["Americano"]*2;
+            document.getElementById("caramelMacchiatoDisplay").textContent = items["Caramel Macchiato"]*2;
+            document.getElementById("chocolateMilkshakeDisplay").textContent = items["Chocolate Milkshake"]*2;
+            document.getElementById("fruitTeaDisplay").textContent = items["Fruit Tea"]*2;
+            document.getElementById("mochaDisplay").textContent = items["Mocha"]*2;
+            promo.textContent = "Free Drinks!!"
+        } else if (vouchcode === 3){
+            promo.textContent = "- RM30";
+        } else if (vouchcode === 4){
+            promo.textContent = ""
+        }
+    }
+
+    voucher();
+    
+    function update() {
+        document.getElementById("waffleDisplay").textContent = items["waffle"];
+        document.getElementById("waffleDiv").style.display = items["waffle"] > 0 ? "" : "none";
+        document.getElementById("wafflePrice").textContent = (items["waffle"] * 8.90).toFixed(2);
+
+        document.getElementById("iceCreamDisplay").textContent = items["iceCream"];
+        document.getElementById("iceCreamDiv").style.display = items["iceCream"] > 0 ? "" : "none";
+        document.getElementById("iceCreamPrice").textContent = (items["iceCream"] * 9.90).toFixed(2);  
+
+        document.getElementById("nuggetDisplay").textContent = items["nugget"];
+        document.getElementById("nuggetDiv").style.display = items["nugget"] > 0 ? "" : "none";
+        document.getElementById("nuggetPrice").textContent = (items["nugget"] * 6.90).toFixed(2);
+
+        document.getElementById("soupDisplay").textContent = items["soup"];
+        document.getElementById("soupDiv").style.display = items["soup"] > 0 ? "" : "none";
+        document.getElementById("soupPrice").textContent = (items["soup"] * 14.90).toFixed(2);
+
+        document.getElementById("saladDisplay").textContent = items["salad"];
+        document.getElementById("saladDiv").style.display = items["salad"] > 0 ? "" : "none";
+        document.getElementById("saladPrice").textContent = (items["salad"] * 12.90).toFixed(2);
+
+        document.getElementById("friesDisplay").textContent = items["fries"];
+        document.getElementById("friesDiv").style.display = items["fries"] > 0 ? "" : "none";
+        document.getElementById("friesPrice").textContent = (items["fries"] * 7.90).toFixed(2);
+
+        document.getElementById("aglioOglioDisplay").textContent = items["Spaghetti Aglio Oglio"];
+        document.getElementById("aglioOglioDiv").style.display = items["Spaghetti Aglio Oglio"] > 0 ? "" : "none";
+        document.getElementById("aglioOglioPrice").textContent = (items["Spaghetti Aglio Oglio"] * 12.90).toFixed(2);
+
+        document.getElementById("carbonaraDisplay").textContent = items["Spaghetti Carbonara"];
+        document.getElementById("carbonaraDiv").style.display = items["Spaghetti Carbonara"] > 0 ? "" : "none";
+        document.getElementById("carbonaraPrice").textContent = (items["Spaghetti Carbonara"] * 16.90).toFixed(2);
+
+        document.getElementById("bologneseChickenDisplay").textContent = items["Spaghetti Bolognese Chicken"];
+        document.getElementById("bologneseChickenDiv").style.display = items["Spaghetti Bolognese Chicken"] > 0 ? "" : "none";
+        document.getElementById("bologneseChickenPrice").textContent = (items["Spaghetti Bolognese Chicken"] * 16.90).toFixed(2);
+
+        document.getElementById("charcoalBurgerDisplay").textContent = items["Black Charcoal Burger"];
+        document.getElementById("charcoalBurgerDiv").style.display = items["Black Charcoal Burger"] > 0 ? "" : "none";
+        document.getElementById("charcoalBurgerPrice").textContent = (items["Black Charcoal Burger"] * 22.90).toFixed(2);
+
+        document.getElementById("fishBurgerDisplay").textContent = items["Fish Burger"];
+        document.getElementById("fishBurgerDiv").style.display = items["Fish Burger"] > 0 ? "" : "none";
+        document.getElementById("fishBurgerPrice").textContent = (items["Fish Burger"] * 20.90).toFixed(2);
+
+        document.getElementById("beefBurgerDisplay").textContent = items["Beef Burger"];
+        document.getElementById("beefBurgerDiv").style.display = items["Beef Burger"] > 0 ? "" : "none";
+        document.getElementById("beefBurgerPrice").textContent = (items["Beef Burger"] * 22.90).toFixed(2);
+
+        document.getElementById("mushroomChopDisplay").textContent = items["Mushroom Chicken Chop"];
+        document.getElementById("mushroomChopDiv").style.display = items["Mushroom Chicken Chop"] > 0 ? "" : "none";
+        document.getElementById("mushroomChopPrice").textContent = (items["Mushroom Chicken Chop"] * 24.90).toFixed(2);
+
+        document.getElementById("lambChopDisplay").textContent = items["Lamb Chop"];
+        document.getElementById("lambChopDiv").style.display = items["Lamb Chop"] > 0 ? "" : "none";
+        document.getElementById("lambChopPrice").textContent = (items["Lamb Chop"] * 59.90).toFixed(2);
+
+        document.getElementById("fishChipsDisplay").textContent = items["Fish and Chip"];
+        document.getElementById("fishChipsDiv").style.display = items["Fish and Chip"] > 0 ? "" : "none";
+        document.getElementById("fishChipsPrice").textContent = (items["Fish and Chip"] * 28.90).toFixed(2);
+
+        document.getElementById("honeyLemonDisplay").textContent = items["Honey Lemon"];
+        document.getElementById("honeyLemonDiv").style.display = items["Honey Lemon"] > 0 ? "" : "none";
+        document.getElementById("honeyLemonPrice").textContent = (items["Honey Lemon"] * 6.90).toFixed(2);
+
+        document.getElementById("americanoDisplay").textContent = items["Americano"];
+        document.getElementById("americanoDiv").style.display = items["Americano"] > 0 ? "" : "none";
+        document.getElementById("americanoPrice").textContent = (items["Americano"] * 11.90).toFixed(2);
+
+        document.getElementById("caramelMacchiatoDisplay").textContent = items["Caramel Macchiato"];
+        document.getElementById("caramelMacchiatoDiv").style.display = items["Caramel Macchiato"] > 0 ? "" : "none";
+        document.getElementById("caramelMacchiatoPrice").textContent = (items["Caramel Macchiato"] * 19.90).toFixed(2);
+
+        document.getElementById("chocolateMilkshakeDisplay").textContent = items["Chocolate Milkshake"];
+        document.getElementById("chocolateMilkshakeDiv").style.display = items["Chocolate Milkshake"] > 0 ? "" : "none";
+        document.getElementById("chocolateMilkshakePrice").textContent = (items["Chocolate Milkshake"] * 16.90).toFixed(2);
+
+        document.getElementById("fruitTeaDisplay").textContent = items["Fruit Tea"];
+        document.getElementById("fruitTeaDiv").style.display = items["Fruit Tea"] > 0 ? "" : "none";
+        document.getElementById("fruitTeaPrice").textContent = (items["Fruit Tea"] * 16.90).toFixed(2);
+
+        document.getElementById("mochaDisplay").textContent = items["Mocha"];
+        document.getElementById("mochaDiv").style.display = items["Mocha"] > 0 ? "" : "none";
+        document.getElementById("mochaPrice").textContent = (items["Mocha"] * 16.90).toFixed(2);
+        
+        localStorage.setItem("items", JSON.stringify(items));
+        document.getElementById("grandTotal").textContent = items["total"];
+        document.getElementById("newTotal").textContent = items["newTotal"];
+        }
+
+        function goCart() {
+        remove("total")
+        remove("waffle")
+        remove("iceCream")
+        remove("nugget")
+        remove("soup")
+        remove("salad")
+        remove("fries")
+        remove("Spaghetti Aglio Oglio")
+        remove("Spaghetti Carbonara")
+        remove("Spaghetti Bolognese Chicken")
+        remove("Black Charcoal Burger")
+        remove("Fish Burger")
+        remove("Beef Burger")
+        remove("Mushroom Chicken Chop")
+        remove("Lamb Chop")
+        remove("Fish and Chip")
+        remove("Honey Lemon")
+        remove("Americano")
+        remove("Caramel Macchiato")
+        remove("Chocolate Milkshake")
+        remove("Fruit Tea")
+        remove("Mocha")
+        remove("voucher")
+        remove("voucherc")
+        remove("newTotal")
+        remove("grandTotal")
+        location.href = "cart.html";
+        }
+
+        function remove(item) {
+        items[item] = (items[item]) - (items[item]);
+        localStorage.setItem("items", JSON.stringify(items));
+        update();
+    }
+
+        function printSection() {
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = document.getElementById('disBox').innerHTML;
+            print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+    <script>
+                  /*Login Signup Change */
+    const username = localStorage.getItem('user-name');
+    if(localStorage.getItem("yes") == 1){
+    document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+    document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+    }
+    </script>
+</body>
+
+</html>

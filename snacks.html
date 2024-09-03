@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="snacks.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="headernav.css">
+  <title>SNACKS</title>
+  <link rel="icon" href="logo.png">
+
+</head>
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a class="active" href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+    </header>
+    <div class="heading">
+        <h1>Snacks</h1>
+        <a href="maindishes.html"><img src="maindishes symbol.jpeg" class="select" alt="Main Dishes"><span>Main Dishes</span></a>
+        <a href="snacks.html"><img src="snack symbol.jpg" class="select" alt="Snacks"><span>Snacks</span></a>
+        <a href="beverages.html"><img src="beverage symbol.jpg" class="select" alt="Beverages"><span>Beverages</span></a>
+        <a href="cart.html"><img src="cart-icon.jpg" class="select" alt="Cart"><span>Cart</span></a>
+        </div>
+    
+    <div class="content">
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="waffle.jpg" alt="Waffle"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Eggs</li>
+                        <li>Milk</li>
+                        <li>Batter</li>
+                        <li>Butter</li>
+                        <li>Strawberry</li>
+                        <li>Blueberry</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Waffle</h2>
+            <h2>RM8.90</h2>
+            <button onclick="plus('waffle')">Add to Cart</button>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="ice cream.jpg" alt="Ice cream"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Strawberry</li>
+                        <li>Vanilla</li>
+                        <li>Mint</li>
+                        <li>Chocolate</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Ice cream</h2>
+            <h2>RM9.90</h2>
+            <button onclick="plus('iceCream')">Add to Cart</button>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="nugget.jpg" alt="Nugget"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Chicken meat</li>
+                        <li>Breading</li>
+                        <li>Eggs</li>
+                        <li>Vegetable oil</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Nugget</h2>
+            <h2>RM6.90</h2>
+            <button onclick="plus('nugget')">Add to Cart</button>
+        </div>
+            
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="mushroom soup with garlic bread.jpg" alt="Mushroom Soup n Garlic Bread"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Mushrooms soup</li>
+                        <li>Pepper</li>
+                        <li>Garlic bread</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Mushroom Soup n Garlic Bread</h2>
+            <h2>RM14.90</h2>
+            <button onclick="plus('soup')">Add to Cart</button>    
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="salad.jpg" alt="Salad"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Tomatoes</li>
+                        <li>Cucumbers</li>
+                        <li>Carrots</li>
+                        <li>Red onions</li>
+                        <li>Bell peppers</li>
+                        <li>Avocado</li>
+                        <li>Olives</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Salad</h2>
+            <h2>RM12.90</h2>
+            <button onclick="plus('salad')">Add to Cart</button>   
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="french fries.jpg" alt="French Fries"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Potatoes</li>
+                        <li>Vegetable oil</li>
+                        <li>Tomato Sauce</li>
+                        <li>Seasoning</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>French Fries</h2>
+            <h2>RM7.90</h2>
+            <button onclick="plus('fries')">Add to Cart</button>  
+        </div>
+    </div> 
+    <script>
+        let items = JSON.parse(localStorage.getItem("items"))||{};
+    
+    function plus(item) {
+        items[item] = ((items[item]) + 1)||1;
+        localStorage.setItem("items", JSON.stringify(items));
+    }
+        /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+        if(localStorage.getItem("yes") == 1){
+        document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+        document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+        }
+    </script> 
+</body>
+</html>

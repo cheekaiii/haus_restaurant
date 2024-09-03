@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="menucover.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <title>MENU</title>
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a class="active" href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+    </header>
+    <div class="content">
+    <h1 class="heading">MENU</h1>
+    <div class="menu-item">
+        <a href="maindishes.html">
+            <img src="maindishes symbol.jpeg" alt="Main Dishes">
+            <span>Main Dishes</span>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="beverages.html">
+            <img src="beverage symbol.jpg" alt="Beverages">
+            <span>Beverages</span>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="snacks.html">
+            <img src="snack symbol.jpg" alt="Snacks">
+            <span>Snacks</span>
+        </a>
+    </div>
+    </div>
+    <script>
+            /*Login Signup Change */
+            const username = localStorage.getItem('user-name');
+    if(localStorage.getItem("yes") == 1){
+    document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+    document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+    }
+    </script>
+</body>
+</html>

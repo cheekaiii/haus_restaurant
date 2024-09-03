@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>VOUCHERS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="stylesheet" href="voucher.css">
+    <link rel="icon" href="logo.png">
+    <!--<script src="voucher.js"></script>-->
+</head>
+<body>
+<header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="login" id="welcome">Welcome ,</li>
+        <li class="login"><a href="personaldetail.html"><i class="fa fa-fw fa-user"></i><span id="welcomename"></span></a></li>
+        <li class="login"><a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+</ul>
+</header>
+<ul class="verticalnav">
+    <li><a href="personaldetail.html">Personal Details </a></li>
+    <li><a class="active" href="voucher.html">Vouchers</a></li>
+    <li><a href="reservation.html">Reservations</a></li>
+</ul>
+<div class="background">
+    <div class="info">
+        <div class="container">
+            <div class="vouchercard">
+                <img src="30percent.png" class="logo">
+                <h3><b>30% off</b> for new members on all main courses<br>with no minimum purchase amount required</h3>
+                <p class="voucher-row">
+                    <span class="code" id="code1">NEWTOHAUS</span>
+                    <span class="copycode" id="copycode1">COPY CODE</span>
+                </p>
+                <p>Valid Till : No Expiry date</p>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+            <div class="vouchercard">
+                <img src="buy1free1.jpg" class="logo">
+                <h3><b>Buy 1</b> get <b>free 1</b> on all beverages <br>using Maybank Credit Card</h3>
+                <p class="voucher-row">
+                    <span class="code" id="code2">HAUSB1F1</span>
+                    <span class="copycode" id="copycode2">COPY CODE</span>
+                </p>
+                <p>Valid Till : 23 September , 2023</p>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+            <div class="vouchercard">
+                <img src="30ringgit.png" class="logo">
+                <h3><b>RM30 discount</b> with a minimum spend of RM150</h3>
+                <p class="voucher-row">
+                    <span class="code" id="code3">150MINUS30</span>
+                    <span class="copycode" id="copycode3">COPY CODE</span>
+                </p>
+                <p>Valid Till : 3 October , 2023</p>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+<script>
+    var copycode1 = document.getElementById("copycode1");
+    var code1 = document.getElementById("code1");
+
+    copycode1.onclick = function(){
+                navigator.clipboard.writeText(code1.innerHTML);
+                copycode1.innerHTML ="COPIED";
+                setTimeout(function(){
+                    copycode1.innerHTML="COPY CODE";
+                }, 3000);
+    }
+    var copycode2 = document.getElementById("copycode2");
+    var code2 = document.getElementById("code2");
+
+    copycode2.onclick = function(){
+                navigator.clipboard.writeText(code2.innerHTML);
+                copycode2.innerHTML ="COPIED";
+                setTimeout(function(){
+                    copycode2.innerHTML="COPY CODE";
+                }, 3000);
+    }    
+    var copycode3 = document.getElementById("copycode3");
+    var code3 = document.getElementById("code3");
+
+    copycode3.onclick = function(){
+                navigator.clipboard.writeText(code3.innerHTML);
+                copycode3.innerHTML ="COPIED";
+                setTimeout(function(){
+                    copycode3.innerHTML="COPY CODE";
+                }, 3000);
+    }
+/*Header Nav */
+const username = localStorage.getItem('user-name');
+    document.getElementById("welcomename").innerHTML = username;
+
+</script>
+</body>
+</html>

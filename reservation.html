@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVATIONS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="login" id="welcome">Welcome ,</li>
+        <li class="login"><a href="personaldetail.html"><i class="fa fa-fw fa-user"></i><span id="welcomename"></span></a></li>
+        <li class="login"><a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+    </ul>
+</header>
+<ul class="verticalnav">
+    <li><a href="personaldetail.html">Personal Details </a></li>
+    <li><a href="voucher.html">Vouchers</a></li>
+    <li><a class="active" href="reservation.html">Reservations</a></li>
+</ul>
+<div class="background">
+    <div class="info">
+        <table id="display">
+            <caption>RESERVATIONS</caption>
+            <tr>
+                <th>Date</th>
+                <th>Reservation Name</th>
+                <th>No. of Pax</th>
+                <th>Time</th>
+            </tr>
+        </table>
+        <a href="#" class="button" id="button">Make booking</a>
+    </div>
+</div>
+<div class="popupbg">
+    <div class="popup-content">
+        <div class="close">+</div>
+        <form id="form">
+            <h2 class="heading">Reservation Online</h2>
+            <div>
+                <label for="name">Your Name* : </label>
+                <input type="text" placeholder="Your name" id="name" name="name" required/>
+            </div>
+            <div>
+                <label for="email">Your Email : </label>
+                <input type="email" placeholder="Your email (optional)" id="email" name="email">
+            </div>
+            <div>
+                <label for="idate">Date* : </label>
+                <input type="date" id="idate" name="idate" required>
+            </div>
+            <div>
+                <label for="itime">Time* : </label>
+                <input type="time" id="itime" name="itime" required>
+            </div>
+            <div>
+                <label for="ppl">How many People*</label>
+                <select name="select" id="ppl" required>
+                    <option value="1">1 persons</option>
+                    <option value="2">2 persons</option>
+                    <option value="3">3 persons</option>
+                    <option value="4">4 persons</option>
+                    <option value="5">5 persons</option>
+                    <option value="6">6 persons</option>
+                    <option value="7">7 persons</option>
+                    <option value="8">8 persons</option>
+                    <option value="9">9 persons</option>
+                    <option value="10+">10 or more persons</option>
+                </select>
+            </div>
+            <button type="button" id="submit" onclick="displayDetails()">Submit</button>
+        </form>
+    </div>
+</div>
+<script>
+    /*OPEN CLOSE BOOKING*/
+    document.getElementById("button").addEventListener("click", function() {
+	document.querySelector(".popupbg").style.display = "flex";
+    document.getElementById("form").reset();
+});
+
+document.querySelector(".close").addEventListener("click", function() {
+	document.querySelector(".popupbg").style.display = "none";
+});
+/*Reservation display*/
+var row = 1;
+function displayDetails(){
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("idate").value;
+    var time = document.getElementById("itime").value;
+    var pax = document.getElementById("ppl").value;
+
+    if(name==""){
+        alert("Your name is required ");
+        return;
+    }
+    if(date==""||time==""){
+        alert("Date and time are required");
+        return;
+    }
+    var display=document.getElementById("display");
+
+    var newRow=display.insertRow(row);
+
+    var cell1= newRow.insertCell(0);
+    var cell2=newRow.insertCell(1);
+    var cell3=newRow.insertCell(2);
+    var cell4=newRow.insertCell(3);
+    
+    cell1.innerHTML = date;
+    cell2.innerHTML = name;
+    cell3.innerHTML = pax;
+    cell4.innerHTML = time;
+     
+    row++;
+
+    document.querySelector(".popupbg").style.display = "none";
+}
+    /*Header Nav */
+    const username = localStorage.getItem('user-name');
+    document.getElementById("welcomename").innerHTML = username;
+
+
+
+</script>
+</body>
+</html>

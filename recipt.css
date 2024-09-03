@@ -1,0 +1,138 @@
+/*layout style*/
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body::-webkit-scrollbar-track {
+    display: none;
+  }
+  button{
+    cursor: pointer;
+  }
+   #disBox{
+    width: 70%;
+    height: 92vh;
+    float: left;
+    text-align: left;
+    background-image: url(Voucher.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   }
+  
+   #disInterface{
+    width: 30%;
+    float: right;
+    background-color: #D6CEC0;
+    height: 100%;
+    min-height: 92vh;
+    padding: 2%;
+   }
+  
+  .quantityButtons {
+    align-items: center;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    color: black;
+    padding: 5px 10px;
+    transition: background-position 0.3s, font-size 0.3s;
+  }
+  
+  .widthButton {
+    border-radius: 15px;
+    width: 100%;
+    left: 75px;
+    right: 75px;
+    color: #6F5B3E;
+    padding: 12px 24px;
+    font-size: smaller;
+    background: linear-gradient(to right, #C4AE78 0%, #C4AE78 50%,  #fff 50%, #fff 100%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.3s, font-size 0.3s;
+    border: #6F5B3E solid 2px;
+  }
+  
+  .widthButton:hover {
+    background-position: 0;
+    color: #fff;
+  }
+  /*dis interface*/
+  #grandTotalH {
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    width: 100%;
+    font-size: 150%;
+    color: black;
+    padding: 5%;
+    text-align: center;
+  }
+
+  #newTotalDiv {
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    width: 100%;
+    color: black;
+    display: none;
+  }
+  
+  #disInterface img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #disInterface div {
+    font-size: 150%;
+  }
+  
+  #disInterface button,#cartInterface div {
+    margin-top: 5%;
+  }
+  /*dis style*/
+  #cartBox::-webkit-scrollbar{
+    width: 10px;
+    display: block;
+    margin-right: 2.5%;
+  }
+  #cartBox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  #cartBox::-webkit-scrollbar-thumb {
+    background: #C4AE78;
+  }
+
+  #cartBox{
+    overflow-y: auto;
+  }
+
+  #disBox button{
+    margin-top: 5%;
+  }
+
+  #disBox h1{
+    font-size: larger;
+    text-align: center;
+    margin: 5%;
+    padding: 1%;
+  }
+
+  #disBox>div>div{
+    margin-top: 3%;
+  }
+
+  #disBox>div {
+    width:40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top:  10%;
+    margin-bottom: auto;
+    background-color: #fff;
+    padding: 1%;
+    border: #6F5B3E dashed 2px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+#cart td{
+  padding: 2%;
+}

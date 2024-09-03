@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="reset.css" rel="stylesheet" type="text/css"/>
+    <link href="headernav.css" rel="stylesheet" type="text/css"/>
+    <link href="review.css" rel="stylesheet" type="text/css"/>
+    <title>REVIEW</title>
+    <link rel="icon" href="logo.png">
+
+</head>
+<style>
+            body{
+            background-color: #F9F6F0;
+        }
+        @keyframes color {
+  0%   { background: #d6cec0; }
+  20%  { background: #c4ae78; }
+  40%  { background: #6f5b3e; }
+  60% { background: #ae8781; }
+  80%  { background: #d6c099; }
+  100%  { background: #d6cec0; }
+
+}
+
+body {
+  animation: color 9s infinite linear;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5.5em;
+  color: #171515;
+  text-align: left;
+  bottom: 20%;
+  overflow: hidden;
+  padding: 2% 0 3% 4%;
+}
+
+img.user-image{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.ratingb:link, .ratingb:visited {
+    width:30%;
+  background-color: #F9F6F0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5em;
+  color: #6f5b3e;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 4%;
+  border-radius: 5px;
+}
+
+.ratingb:hover, .ratingb:active {
+  background-color: #6f5b3e;
+  color: #F9F6F0;
+}
+
+</style>
+<body>
+ <header>
+  <ul class="header-buttons">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutus.html">About us</a></li>
+    <li><a href="menucover.html">Menu</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contactus.html">Contact us</a></li>
+    <li><a class="active" href="review.html">Reviews</a></li>
+    <li class="space"></li>
+    <li class="space"></li>
+    <li class="login" id="profile"><a href="login.html">Login</a></li>
+    <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+</ul>
+</header>
+
+    <div style="width: 100%;background-color: #F9F6F0;">
+        <h1>Reviews<span style="color: #c4ae78;padding-left: 15px;">.</span></h1>
+    </div>
+
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; height: 20vh;">
+        <a href="rating.html" class="ratingb">Leave your own review</a>
+        <div class="sort-bar">
+            <select id="sort-dropdown">
+                <option value="random">Random</option>
+                <option value="best-to-worst">Best to Worst</option>
+                <option value="worst-to-best">Worst to Best</option>
+                <option value="1-star">1 Star</option>
+                <option value="2-star">2 Stars</option>
+                <option value="3-star">3 Stars</option>
+                <option value="4-star">4 Stars</option>
+                <option value="5-star">5 Stars</option>
+            </select>
+        </div>
+    </div>
+    <div id="reviews-container" class="reviews-container">
+        <!-- Reviews will be displayed here -->
+    </div>
+    <script>
+          /*Login Signup Change */
+    const username = localStorage.getItem('user-name');
+    if(localStorage.getItem("yes") == 1){
+    document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+    document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+    }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

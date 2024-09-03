@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL DETAILS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="stylesheet" href="personaldetail.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="login" id="welcome">Welcome ,</li>
+        <li class="login"><a href="personaldetail.html"><i class="fa fa-fw fa-user"></i><span id="welcomename"></span></a></li>
+        <li class="login"><a href="logout.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+    </ul>
+</header>
+<ul class="verticalnav">
+    <li><a class="active" href="personaldetail.html">Personal Details </a></li>
+    <li><a href="voucher.html">Vouchers</a></li>
+    <li><a href="reservation.html">Reservations</a></li>
+</ul>
+<div class="background">
+    <div class="info">
+        <div class="details">
+            <ul>
+            <li>User ID : &nbsp;<span id="userID" class="text"></span></li>
+            <li>Username : &nbsp;<span id="username" class="text"></span> </li>
+            <li>Birthday : &nbsp;<span id="birthday" class="text"></span></li>
+            <li>Mail :  &nbsp;<span id="email" class="text"></span></li>
+            <li>Contact Number : &nbsp;<span id="contact" class="text"></span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h1 id="minimalizedname">Christopher Tan Ah Kao</h1>
+            <p id="minimalizedid">@chris666</p>
+            <img src="user2.jpg" alt="" id="profile-pic">
+            <label for="input-file">Update Image</label>
+            <input type="file" accept="image/jpeg, image/jpg, image/png" id="input-file">
+        </div>
+    </div>
+</div>
+
+<script>
+    /*Change profile picture*/
+    let profilePic=document.getElementById("profile-pic");
+    let inputFile=document.getElementById("input-file");
+    
+    inputFile.onchange=function(){
+        profilePic.src= URL.createObjectURL(inputFile.files[0]);
+    }
+
+    /*Sign up Display*/
+    const username = localStorage.getItem('user-name');
+    document.getElementById("welcomename").innerHTML = username;
+    const userid = localStorage.getItem('user-ID');
+    const birthday = localStorage.getItem('birth-day');
+    const email = localStorage.getItem('e-mail');
+    const contact = localStorage.getItem('con-tact');
+    
+    document.getElementById('userID').textContent = userid;
+    document.getElementById('username').textContent = username;
+    document.getElementById('birthday').textContent = birthday;
+    document.getElementById('email').textContent = email;
+    document.getElementById('contact').textContent = contact;
+    document.getElementById('minimalizedname').textContent = username;
+    document.getElementById('minimalizedid').textContent = userid;
+</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="maindishes.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="headernav.css">
+  <title>MAIN DISHES</title>
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a class="active" href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+    </header>
+    <div class="heading">
+    <h1>Pick your favourite!</h1>
+    <a href="maindishes.html"><img src="maindishes symbol.jpeg" class="select" alt="Main Dishes"><span>Main Dishes</span></a>
+    <a href="snacks.html"><img src="snack symbol.jpg" class="select" alt="Snacks"><span>Snacks</span></a>
+    <a href="beverages.html"><img src="beverage symbol.jpg" class="select" alt="Beverages"><span>Beverages</span></a>
+    <a href="cart.html"><img src="cart-icon.jpg" class="select" alt="Cart"><span>Cart</span></a>
+    </div>
+    <section>
+        <ul>
+            <li class="option">All</li>
+            <li class="option">Spaghetti</li>
+            <li class="option">Burger</li>
+            <li class="option">Chop</li>
+        </ul>
+    </section>
+    <div class="content">
+        <div class="container Spaghetti">
+            <div class="card">
+                <div class="front"><img src="aglio oglio.jpg" alt="Spaghetti Aglio Oglio"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Spaghetti</li>
+                        <li>Red pepper flakes</li>
+                        <li>Black pepper</li>
+                        <li>Fresh parsley</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Spaghetti Aglio Oglio</h2>
+            <h2>RM12.90</h2>
+            <button onclick="plus('Spaghetti Aglio Oglio')">Add to Cart</button>
+        </div>
+
+        <div class="container Spaghetti">
+            <div class="card">
+                <div class="front"><img src="cabonara.jpg" alt="Spaghetti Carbonara"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Spaghetti</li>
+                        <li>Pecorino Romano cheese</li>
+                        <li>Guanciale or pancetta <br>(Italian cured pork)</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Spaghetti Carbonara</h2>
+            <h2>RM16.90</h2>
+            <button onclick="plus('Spaghetti Carbonara')">Add to Cart</button>
+        </div>
+            
+        <div class="container Spaghetti">
+            <div class="card">
+                <div class="front"><img src="chicken bolognese.jpg" alt="Chicken Bolognese" id="bolog"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Chicken breast</li>
+                        <li>Spaghetti</li>
+                        <li>Canned tomatoes</li>
+                        <li>Fresh basil</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Spaghetti Bolognese Chicken</h2>
+            <h2>RM16.90</h2>
+            <button onclick="plus('Spaghetti Bolognese Chicken')">Add to Cart</button>
+        </div>
+
+        <!-- Burger Items -->
+        <div class="container Burger">
+            <div class="card">
+                <div class="front"><img src="black charcoal burger.jpg" alt="Black Charcoal Burger"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Charcoal burger buns</li>
+                        <li>Cheese</li>
+                        <li>Lettuce</li>
+                        <li>Tomato slices</li>
+                        <li>Red onion slices</li>
+                        <li>Pickles</li>
+                    </ul>
+                </p> 
+                </div>
+            </div>  
+            <h2>Black Charcoal Burger</h2>
+            <h2>RM22.90</h2>
+            <button onclick="plus('Black Charcoal Burger')">Add to Cart</button>
+        </div>
+
+        <div class="container Burger">
+            <div class="card">
+                <div class="front"><img src="fish burger.jpg" alt="Fish Burger"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Fish fillet</li>
+                        <li>Burger buns</li>
+                        <li>Lettuce</li>
+                        <li>Tomato slices</li>
+                        <li>Onion rings</li>
+                        <li>Tartar sauce</li>
+                    </ul>
+                </p> 
+                </div> 
+            </div>      
+            <h2>Fish Burger</h2>
+            <h2>RM20.90</h2>
+            <button onclick="plus('Fish Burger')">Add to Cart</button>
+        </div>
+            
+        <div class="container Burger">
+            <div class="card">
+                <div class="front"><img src="beef burger.jpg" alt="Beef Burger"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Ground beef</li>
+                        <li>Burger buns</li>
+                        <li>Onion</li>
+                        <li>Tomato</li>
+                        <li>Lettuce</li>
+                        <li>Cheese</li>
+                        <li>Pickles</li>
+                    </ul>
+                </p> 
+                </div>  
+            </div>     
+            <h2>Beef Burger</h2>
+            <h2>RM22.90</h2>
+            <button onclick="plus('Beef Burger')">Add to Cart</button>        
+        </div>
+
+        <!-- Chop Items -->
+        <div class="container Chop">
+            <div class="card">
+                <div class="front"><img src="mushroom chicken chop.jpg" alt="Mushroom Chicken Chop" id="cchop"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Chicken breast</li>
+                        <li>Mushrooms</li>
+                        <li>Onion</li>
+                        <li>Garlic</li>
+                        <li>Chicken broth</li>
+                  </ul>
+                </p> 
+                </div>   
+            </div>       
+            <h2>Mushroom Chicken Chop</h2>
+            <h2>RM24.90</h2>
+            <button onclick="plus('Mushroom Chicken Chop')">Add to Cart</button>
+        </div>
+
+        <div class="container Chop">
+            <div class="card">
+                <div class="front"><img src="lamb chop.jpg" alt="Lamb Chop"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Lamb chops</li>
+                        <li>Olive oil</li>
+                        <li>Garlic</li>
+                        <li>Rosemary</li>
+                        <li>Thyme</li>
+                        <li>Dijon mustard</li>
+                    </ul>
+                </p> 
+                </div>
+            </div>            
+            <h2>Lamb Chop</h2>
+            <h2>RM59.90</h2>
+            <button onclick="plus('Lamb Chop')">Add to Cart</button>
+        </div>
+            
+        <div class="container Chop">
+            <div class="card">
+                <div class="front"><img src="fish n chip.jpg" alt="Fish and Chip" id="fish"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>White fish fillets</li>
+                        <li>Lemon wedges</li>
+                        <li>Tartar sauce</li>
+                        <li>French fries</li>
+                        <li>Salad</li>
+                    </ul>
+                </p> 
+                </div>
+            </div>          
+            <h2>Fish and Chip</h2>
+            <h2>RM28.90</h2>
+            <button onclick="plus('Fish and Chip')">Add to Cart</button>
+        </div>
+    </div>
+
+<script>
+    const option = document.querySelectorAll('.option'); 
+    const allContainer = document.querySelectorAll('.container'); 
+
+    let items = JSON.parse(localStorage.getItem("items"))||{};
+    
+    function plus(item) {
+        items[item] = ((items[item]) + 1)||1;
+        localStorage.setItem("items", JSON.stringify(items));
+    }
+    
+    for(let i = 0; i < option.length; i++){
+        option[i].addEventListener('click', filterPosts.bind(this, option[i]));
+    }
+    
+    function filterPosts(item){
+        changeActivePosition(item);
+        for(let i = 0; i < allContainer.length; i++){
+            if(item.textContent === "All") { 
+                allContainer[i].style.display = "block"; 
+            } else if(allContainer[i].classList.contains(item.textContent)){
+                allContainer[i].style.display = "block";
+            } else {
+                allContainer[i].style.display = "none";
+            }
+        }
+    }
+    
+    function changeActivePosition(activeItem){
+        for(let i = 0; i < option.length; i++){
+            option[i].classList.remove('active');
+        }
+        activeItem.classList.add('active');
+    }
+    /*Login Signup Change */
+    const username = localStorage.getItem('user-name');
+    if(localStorage.getItem("yes") == 1){
+    document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+    document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+    }
+
+    </script>
+</body>
+</html>
+
+

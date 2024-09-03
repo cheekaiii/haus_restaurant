@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>HAUS Login</title>
+        <link rel="stylesheet" href="reset.css">
+        <link href="login.css" rel="stylesheet"/>
+        <link href="headernav.css" rel="stylesheet"/>
+        <link rel="icon" href="logo.png">
+        </head>
+            <body>
+            <header>
+                <ul class="header-buttons">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="menucover.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="review.html">Reviews</a></li>
+                    <li class="space"></li>
+                    <li class="space"></li>
+                    <li class="login" id="profile"><a href="login.html">Login</a></li>
+                    <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+                </ul>
+            </header>
+            <div class="background">   
+            <div class="login-container">
+                <form id="login-form" onsubmit="login()">
+                    <h2>Login</h2>
+                    <div class="form-box">
+                        <label for="login-userid">User ID</label>
+                        <input type="text" id="login-userid" name="login-userid" required>
+                    </div>
+                    <div class="form-box">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <div class="remember">
+                        <label for="login-remember"></label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember Me
+                            </div>
+                    <button type="submit">Login</button>
+                    <div class="signup">
+                        <p>Don't have an Account</p>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            function login() {
+                // Get the entered User ID and password
+                const enteredUserID = document.getElementById("login-userid").value;
+                const enteredPassword = document.getElementById("login-password").value;
+        
+                // Get the registered User ID and password from localStorage
+                const registeredUserID = localStorage.getItem('user-ID');
+                const registeredPassword = localStorage.getItem('password');
+        
+                // Check if the entered User ID and password match the registered values
+                if ((enteredUserID == registeredUserID) && (enteredPassword == registeredPassword)) {
+                    location.href="personaldetail.html";    
+                    localStorage.setItem('yes',1);
+                    alert("Login successful!");
+                    return true; // Allow the form to submit
+
+                } else {
+                    alert("Login failed. Please check your User ID and password.");
+                    return false; // Prevent the form from submitting
+                }
+            }
+        </script>
+        </body>
+</html>

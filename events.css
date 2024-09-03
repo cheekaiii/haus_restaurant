@@ -1,0 +1,225 @@
+div.body{
+  display:flex;
+}
+/* Calendar stlyes */
+@keyframes color {
+  0%   { background: #d6cec0; }
+  20%  { background: #c4ae78; }
+  40%  { background: #6f5b3e; }
+  60% { background: #ae8781; }
+  80%  { background: #d6c099; }
+  100%  { background: #d6cec0; }
+}
+
+div.left{
+  width:50%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: color 9s infinite linear;;
+}
+div.calendar{
+  display: block;
+  float:left;
+  background-color:white;
+  width:80%;
+  height:auto;
+  max-height: 95%;
+  border-radius: 5% 15%;
+  padding:2%;
+
+}
+
+p.month{
+  padding:5px 25px;
+  width:100%;
+  text-align:center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+.days {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.days li {
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  color:#6F5B3E;
+  font-size:20PX;
+  font-weight: bold;
+ }
+.date {
+  padding:10px 0px;
+}
+.date li{
+  display:inline-block;
+  list-style-type: none;
+  width:13%;
+  text-align:center;
+  font-size:20px; 
+  padding: 15px;
+  cursor: pointer;
+}
+.date li.prevdate{
+  color: hsla(20, 7%, 25%,0.3);
+}
+.date li:not(.prevdate):hover{
+  background-color: rgb(208, 207, 207);
+  border-radius:50%;
+}
+ul.date li.events{
+  background-color: #C4AE78;
+  color:white;
+  border-radius: 50%;
+}
+ul.date li.events:hover{
+  background-color: #6F5B3E;
+  color: #F9F6F0;
+}
+
+button.button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+div.subcalendar{
+  display: none;
+} 
+button.showcalendar{
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*Description list*/
+div.right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+  overflow: auto;
+  background-color: #F9F6F0;
+  position: relative;
+}
+#playbutton{
+  position: absolute;
+  top:10px;
+  right:10px;
+  padding:10px 0;
+  width:12%;
+  border: none;
+  border-radius:15px;
+  background-color: #C4AE78;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
+#playbutton:hover{
+  background-color: #d6c099;
+}
+
+div#default{
+  color:black;
+}
+div#default h1{
+  font-size:50px;
+  padding:10px;
+  padding-top:30px;
+}
+
+  div#default img{
+  opacity :0.3;
+}
+div#descript916, div#descript1012, div#descript1105{
+  color:black;
+  width:85%;
+  height:100vh;
+  margin-left:2%;
+  padding: 3% 4% 3% 1%;
+  display: none;
+}
+div#descript916 h1,div#descript1012 h1,div#descript1105 h1{
+  font-size: 40px;
+  margin-top:4%;
+  margin-bottom: 4%;
+  font-weight: bold;
+  color:#6F5B3E;
+  text-shadow: 2px 2px #C4AE78;
+}
+#culinary,#singles,#jazz{
+  border-radius: 5%;
+  margin:2%;
+}
+div#descript916 dl,div#descript1012 dl,div#descript1105 dl{
+  margin-left:5%;
+}
+  div#descript916 dt,div#descript1012 dt,div#descript1105 dt{
+  text-align:left;
+  font-size: 25px;
+  font-weight:bolder;
+  margin-top:10px;
+  color:#C4AE78;
+
+}
+div#descript916 dd,div#descript1012 dd,div#descript1105 dd{
+  margin-top:10px;
+  text-align: left;
+  padding-left: 10%;
+}
+div#descript916 dd b,div#descript1012 dd b,div#descript1105 dd b{
+  display:block;
+  cursor: default;
+  color: #6F5B3E;
+}
+div#descript916 dd p,div#descript1012 dd p,div#descript1105 dd p{
+  margin-bottom: 10px;
+  cursor: default;
+  padding-top:15px;
+  display: none;
+}
+div#descript916 p.address,div#descript1012 p.address,div#descript1105 p.address{
+  width:80%;
+  margin:0 auto;
+  font-style: italic;
+}
+div#descript916 p a,div#descript1012 p a,div#descript1105 p a{
+  text-decoration: none;
+  color: #C4AE78;
+}
+
+div#descript916 dd b:hover+p,div#descript916 dd p:hover{
+  display: block;
+  animation: zoom 0.3s;
+}
+div#descript1012 dd b:hover+p,div#descript1012 dd p:hover{
+  display: block;
+  animation: zoom 0.3s;
+}
+div#descript1105 dd b:hover+p,div#descript1105 dd p:hover{
+  display: block;
+  animation: zoom 0.3s;
+}
+div.animate{
+  animation: zoom 0.6s;
+}
+@keyframes zoom {
+  from{transform:scale(0)}
+  to{transform:scale(1)}
+}   

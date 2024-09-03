@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form name="paymentform" id="paymentform">
+    <legend>Payment</legend>
+    Name: <input type="text" name="name" id="name"/><br/><br>
+    Check in: <input type="date" name="checkin" id="checkin"><br><br>
+    Check out: <input type="date" name="checkout" id="checkout" onchange="calculate()"><br><br>
+    Number of date: <input type="text" name="noofdays" id="noofdays" disabled><br><br>
+    Room Type: <select name="room" id="room" onchange="calculate()">
+        <option value="">Select Room</option>
+        <option value="120.00">Standard Room(RM120.00)</option>
+        <option value="140.00">Deluxe Room(RM140.00)</option>
+        <option value="225.00">Superior Deluxe Room(RM225.00)</option>
+    </select><br><br>
+    Total Amount (RM): <input type="text" name="total" id="total" disabled><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+</form>
+
+<script>
+    function calculate(){
+    var checkin=document.getElementById("checkin").value;
+    var checkout=document.getElementById("checkout").value;
+    var days;
+
+    days= new Date(checkout) - new Date(checkin);
+    days=days/(1000*60*60*24);
+
+    if(days<=0){
+        alert("Check out date must be after check in date.");
+    }else{
+        document.getElementById("noofdays").value=days;
+    }
+    var index=document.getElementById("room").selectedIndex;
+    var value=document.getElementById("room").options[index].value;
+
+    var total=parseFloat(days*value).toFixed(2);
+    document.getElementById("total").value=total;
+}
+</script>
+</body>
+</html>

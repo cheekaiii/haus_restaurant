@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="beverages.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="headernav.css">
+  <title>BEVERAGES</title>
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <ul class="header-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a class="active" href="menucover.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li class="space"></li>
+            <li class="space"></li>
+            <li class="login" id="profile"><a href="login.html">Login</a></li>
+            <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+    </header>
+    <div class="heading">
+        <h1>Beverages</h1>
+        <a href="maindishes.html"><img src="maindishes symbol.jpeg" class="select" alt="Main Dishes"><span>Main Dishes</span></a>
+        <a href="snacks.html"><img src="snack symbol.jpg" class="select" alt="Snacks"><span>Snacks</span></a>
+        <a href="beverages.html"><img src="beverage symbol.jpg" class="select" alt="Beverages"><span>Beverages</span></a>
+        <a href="cart.html"><img src="cart-icon.jpg" class="select" alt="Cart"><span>Cart</span></a>
+    </div>
+    
+    <div class="content">
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="honey lemon.jpg" alt="Honey Lemon"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Honey</li>
+                        <li>Lemon</li>
+                        <li>Mint leaves</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Honey Lemon</h2>
+            <h2>RM6.90</h2>
+            <button onclick="plus('Honey Lemon')">Add to Cart</button>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="americano.jpg" alt="Americano"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Espresso</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Americano</h2>
+            <h2>RM11.90</h2>
+            <button onclick="plus('Americano')">Add to Cart</button>
+        </div>
+            
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="caramel macchiato.jpg" alt="Caramel Macchiato"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Espresso</li>
+                        <li>Milk</li>
+                        <li>Caramel syrup</li>
+                        <li>Whipped cream</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Caramel Macchiato</h2>
+            <h2>RM19.90</h2>
+            <button onclick="plus('Caramel Macchiato')">Add to Cart</button>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="chocalate milkshake.jpg" alt="Chocolate Milkshake"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Milk</li>
+                        <li>Cocoa powder</li>
+                        <li>Sugar</li>
+                        <li>Whipped cream</li>
+                        <li>Chocolate syrup</li>
+                    </ul>
+                </p>
+            </div>
+            </div>
+            <h2>Chocolate Milkshake</h2>
+            <h2>RM16.90</h2>
+            <button onclick="plus('Chocolate Milkshake')">Add to Cart</button>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="fruittea.jpg" alt="Fruit Tea"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Dried fruit pieces</li>
+                        <li>Hibiscus petals</li>
+                        <li>Rosehip shells</li>
+                        <li>Citrus peel</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <h2>Fruit Tea</h2>
+            <h2>RM16.90</h2>
+            <button onclick="plus('Fruit Tea')"></buttononclick>Add to Cart</button>
+        </div>
+            
+        <div class="container">
+            <div class="card">
+                <div class="front"><img src="mocha.jpg" alt="Mocha"></div>
+                <div class="back">
+                <p>
+                    <ul>
+                        <li>Espresso</li>
+                        <li>Hot milk</li>
+                        <li>Cocoa powder</li>
+                        <li>Sugar</li>
+                        <li>Whipped cream</li>
+                        <li>Caramel</li>
+                        <li>Cinnamon</li>
+                    </ul>
+                </p>
+              </div>
+            </div>
+            <h2>Mocha</h2>
+            <h2>RM16.90</h2>
+            <button onclick="plus('Mocha')">Add to Cart</button>      
+        </div>
+    </div>  
+    <script>
+    let items = JSON.parse(localStorage.getItem("items"))||{};
+    
+    function plus(item) {
+        items[item] = ((items[item]) + 1)||1;
+        localStorage.setItem("items", JSON.stringify(items));
+    }
+    
+    function goMenu() {
+        window.location.href = "menucover.html";
+    }
+
+    function update() {
+        document.getElementById("honeyLemonDisplay").textContent = items["Honey Lemon"];
+        document.getElementById("honeyLemonDiv").style.display = items["Honey Lemon"] > 0 ? "" : "none";
+        document.getElementById("honeyLemonPrice").textContent = (items["Honey Lemon"] * 6.90).toFixed(2);
+
+        document.getElementById("americanoDisplay").textContent = items["Americano"];
+        document.getElementById("americanoDiv").style.display = items["Americano"] > 0 ? "" : "none";
+        document.getElementById("americanoPrice").textContent = (items["Americano"] * 11.90).toFixed(2);
+
+        document.getElementById("caramelMacchiatoDisplay").textContent = items["Caramel Macchiato"];
+        document.getElementById("caramelMacchiatoDiv").style.display = items["Caramel Macchiato"] > 0 ? "" : "none";
+        document.getElementById("caramelMacchiatoPrice").textContent = (items["Caramel Macchiato"] * 19.90).toFixed(2);
+
+        document.getElementById("chocolateMilkshakeDisplay").textContent = items["Chocolate Milkshake"];
+        document.getElementById("chocolateMilkshakeDiv").style.display = items["Chocolate Milkshake"] > 0 ? "" : "none";
+        document.getElementById("chocolateMilkshakePrice").textContent = (items["Chocolate Milkshake"] * 16.90).toFixed(2);
+
+        document.getElementById("fruitTeaDisplay").textContent = items["Fruit Tea"];
+        document.getElementById("fruitTeaDiv").style.display = items["Fruit Tea"] > 0 ? "" : "none";
+        document.getElementById("fruitTeaPrice").textContent = (items["Fruit Tea"] * 16.90).toFixed(2);
+
+        document.getElementById("mochaDisplay").textContent = items["Mocha"];
+        document.getElementById("mochaDiv").style.display = items["Mocha"] > 0 ? "" : "none";
+        document.getElementById("mochaPrice").textContent = (items["Mocha"] * 16.90).toFixed(2);
+    }
+
+    update();
+      
+    /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+    if(localStorage.getItem("yes") == 1){
+    document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+    document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+    }
+    </script>
+</body>
+</html>

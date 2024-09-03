@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>APPLY VOUCHERS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="headernav.css">
+    <link rel="stylesheet" href="recipt.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+  <header>
+    <ul class="header-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a class="active" href="menucover.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li class="space"></li>
+        <li class="space"></li>
+        <li class="login" id="profile"><a href="login.html">Login</a></li>
+        <li class="login" id="logout"><a href="signup.html">Signup</a></li>
+    </ul>
+</header>
+  <div id="disBox">
+    <div>
+    <h1>Apply Vouchers</h1>
+    <form onsubmit="checkCode()">
+    <input type="text" id="codeInput">
+    </form>
+    <div id="error">‎</div>
+    <button class="widthButton" onclick="checkCode()">Submit</button>
+    </div>
+  </div>
+  <div id="disInterface">
+    <img src="menucover background.png">
+    <div id="grandTotalH"><h1>Grand Total</h1></div>
+    <div>RM <span id="grandTotal"></span></div>
+    <div id="promo"></div>
+    <div id="newTotalDiv">RM <span id="newTotal"></span></div>
+    <button class="widthButton" onclick="goPrint()">Print Recipt</button>
+  </div>
+  
+<script>
+    let items = JSON.parse(localStorage.getItem("items"));
+    error = document.getElementById("error");
+    promo = document.getElementById("promo");
+
+    function checkCode() {
+        event.preventDefault();
+        const vouchCode = document.getElementById("codeInput").value;
+        if (vouchCode === "NEWTOHAUS") {
+            error.textContent = "Voucher Redeemed";
+            promo.textContent = "- 30%"
+            items["newTotal"] = (items["total"]*0.7).toFixed(2)
+            items["voucherC"] = 1
+            localStorage.setItem("items", JSON.stringify(items));
+            update();
+        } else if (vouchCode === "HAUSB1F1") {
+            error.textContent = "Voucher Redeemed";
+            promo.textContent = "Double the quantity of drinks";
+            items["voucherC"] = 2;
+            localStorage.setItem("items", JSON.stringify(items));
+        } else if (vouchCode === "150MINUS30") {
+            if(items["total"] <= 150){
+            error.textContent = "You can only use this voucher if your purchase is more than RM 150";
+            }
+            else {
+            error.textContent = "Voucher Redeemed";
+            promo.textContent = "- RM 30";
+            items["newTotal"] = (items["total"] - 30).toFixed(2);
+            items["voucherC"] = 3;
+            localStorage.setItem("items", JSON.stringify(items));
+            update();}
+        } else if (vouchCode === "aaaaaaaa") {
+            error.textContent = "Voucher Redeemed";
+            items["newTotal"] = (items["total"]*0.01).toFixed(2);
+            promo.textContent = "- 99%";
+            items["voucherC"] = 5;
+            localStorage.setItem("items", JSON.stringify(items));
+        }else {
+            error.textContent = "Invalid Voucher Code";
+        }}
+
+    function update() {
+            document.getElementById("newTotalDiv").style.display = "block";
+            document.getElementById("newTotal").textContent = items["newTotal"];
+            localStorage.setItem("items", JSON.stringify(items));
+    }
+    function startup(){
+            document.getElementById("grandTotal").textContent = items["total"];
+    }
+    startup();
+        
+    function goPrint() {
+    location.href = "print.html";
+    }
+    </script>
+    <script>
+        /*Login Signup Change */
+        const username = localStorage.getItem('user-name');
+        if(localStorage.getItem("yes") == 1){
+        document.getElementById("profile").innerHTML= "<a href='personaldetail.html'><i class='fa fa-fw fa-user'></i><span id='welcomename'>"+username+"</span></a>";
+        document.getElementById("logout").innerHTML="<a href='logout.html'><i class='fa fa-sign-out'></i> Logout</a>"
+        }
+    </script>
+</body>
+
+</html>
